@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Gallery Hình Ảnh - Triển Lãm 54 Dân Tộc</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee6c2b",
+                        "accent-red": "#8B0000",
+                        "accent-gold": "#F4E1D2",
+                        "text-main": "#1b120d",
+                        "text-muted": "#9a664c",
+                        "background-light": "#fcf9f8",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .gallery-item { position: relative; overflow: hidden; cursor: pointer; }
+        .gallery-overlay { 
+            position: absolute; 
+            inset: 0; 
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-item img { transition: transform 0.5s; }
+        .gallery-item:hover img { transform: scale(1.1); }
+    </style>
+</head>
+<body class="bg-background-light text-text-main font-display antialiased">
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#e7d7cf]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <a href="Home.html" class="flex items-center gap-3">
+                        <div class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
+                            <span class="material-symbols-outlined text-[32px]">museum</span>
+                        </div>
+                        <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="home.html" class="text-sm font-medium transition-colors hover:text-primary">Trang chủ</a>
+                    <a href="list.html" class="text-sm font-medium transition-colors hover:text-primary">Danh sách</a>
+                    <a href="map.html" class="text-sm font-medium transition-colors hover:text-primary">Bản đồ</a>
+                    <a href="gallery.html" class="text-primary text-sm font-bold transition-colors">Hình Ảnh</a>
+                    <a href="festival.html" class="text-sm font-medium transition-colors hover:text-primary">Lễ hội</a>
+                    <a href="heritage.html" class="text-sm font-medium transition-colors hover:text-primary">Di sản</a>
+                    <a href="about.html" class="text-sm font-medium transition-colors hover:text-primary">Giới thiệu</a>
+                </nav>
+                <button onclick="toggleDarkMode()" class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">brightness_6</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-primary/5 to-accent-gold/10 py-16 border-b border-[#e7d7cf]">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">photo_library</span>
+                        <span class="text-sm font-bold text-primary uppercase tracking-wider">Thư viện hình ảnh</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black text-text-main mb-4">
+                        Văn Hóa 54 Dân Tộc
+                    </h1>
+                    <p class="text-lg text-text-muted leading-relaxed">
+                        Khám phá một số hình ảnh đặc sắc về trang phục, kiến trúc, lễ hội và đời sống của các dân tộc Việt Nam
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Tabs -->
+        <section class="sticky top-20 z-40 bg-background-light border-b border-[#e7d7cf] py-4">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex gap-3 overflow-x-auto hide-scrollbar pb-2">
+                    <button onclick="filterGallery('all')" class="filter-btn active px-6 py-2 rounded-full font-semibold text-sm whitespace-nowrap transition-all">
+                        Tất cả
+                    </button>
+                    <button onclick="filterGallery('costume')" class="filter-btn px-6 py-2 rounded-full font-semibold text-sm whitespace-nowrap transition-all">
+                        Trang phục
+                    </button>
+                    <button onclick="filterGallery('architecture')" class="filter-btn px-6 py-2 rounded-full font-semibold text-sm whitespace-nowrap transition-all">
+                        Kiến trúc
+                    </button>
+                    <button onclick="filterGallery('festival')" class="filter-btn px-6 py-2 rounded-full font-semibold text-sm whitespace-nowrap transition-all">
+                        Lễ hội
+                    </button>
+                    <button onclick="filterGallery('lifestyle')" class="filter-btn px-6 py-2 rounded-full font-semibold text-sm whitespace-nowrap transition-all">
+                        Đời sống
+                    </button>
+                    <button onclick="filterGallery('craft')" class="filter-btn px-6 py-2 rounded-full font-semibold text-sm whitespace-nowrap transition-all">
+                        Thủ công
+                    </button>
+                    <button onclick="filterGallery('landscape')" class="filter-btn px-6 py-2 rounded-full font-semibold text-sm whitespace-nowrap transition-all">
+                        Phong cảnh
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="py-12">
+            <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    
+                    <!-- Image 1 - Costume -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="costume">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKm89qY3i6ceZzXa5s3r6Yz9zQPZ5fkFAsxFhlWbs7cIrOlz_-l94PKmVj5Nq_Wd9mKwqTLUnLbdp3ljfgid2wNSpJFtxe1nHwVnmIqcMckMCRLobAo4SehSdBEgfZHAwLKerWXStEoxNls3rlaNTymYp_wHXnRDQMi4BzHs1zh_b5l8qR4c5vexuNg5X2mjMjzvzbxghP5AB8c3omt9t-6LJeFsL-sIbThhNsCxj29VISOGFeMdbjbPUsAmroJjLuj9tdq50jIM0" class="w-full h-full object-cover" alt="Trang phục H'Mông"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Trang phục H'Mông</h3>
+                            <p class="text-white/80 text-sm">Họa tiết thêu tay tinh xảo</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="costume">
+                        <img src="https://i.pinimg.com/736x/1a/e2/d9/1ae2d9d2d7bf8d0e0848bed265837e6c.jpg" class="w-full h-full object-cover" alt="Trang phục H'Mông"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Trang phục H'Mông</h3>
+                            <p class="text-white/80 text-sm">Họa tiết thêu tay tinh xảo</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 2 - Costume -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="costume">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZSoSLoJM0tAtlkhmBC9rhiiS75DNCU9sIs1esiuTwzI0iEScJNNPabAmxpV54sH3bHFWpDJcpF8zO2khnLM5OVCmSzrTUjutd6Y28ZPgU7Jmwr_kcNa81Y9cB3L8OaWObRoBP3kbG5cdI6YnfpDhHsVei4Z7xEBeTb_8iksqOgLoolTqAIze53bcFZnnq5n1O39HFNFEahRs7-sT2_hlVz7udO8A70e3MH6DOvLWgiFZw85ZvN_YIAU8vc9lKjdrQ_Wf4fzX75UQ" class="w-full h-full object-cover" alt="Trang phục Dao Đỏ"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Trang phục Dao Đỏ</h3>
+                            <p class="text-white/80 text-sm">Khăn đội đầu đặc trưng</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 3 - Festival -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="festival">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu1qDM54iW-1wnxzM12gPIuunp_9pX5Je-3hLDZBoyZS7VwmFNG9hSQzhh6bNc-KLjj2o5Uty_FPJj_e5XPS1LpnZ86WI0pOV1sJdn6a7fyPLcE1woOJJiRGUyOiJnT0boyoaWtu-aWcyDBJWU9v8yzDks666yUSByx5nZ5shoJHNfvQby8beT494P59i1rc4EqkFelP-2clJhVtlYP4roLJYkYpDOy3Ysnzuf2DKgcHMFb3vzopyTBjJX6tQ8t6ZXVot4rr7mubA" class="w-full h-full object-cover" alt="Lễ hội Gau Tao"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Lễ hội Gau Tao</h3>
+                            <p class="text-white/80 text-sm">Múa khèn truyền thống</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 4 - Architecture -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="architecture">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiYO--73LlaLLUKcQ8GqX1Fl38xD6yb-iT-mw7Mj7J0DoWF2BL1bmI2u0ian1NkMwdbPxFAxJk8PN4WLzZV5kbvUzVy3LEXytAAAGx1VySK6WMKU7ctweyqksV0kN10VcJ2JSpxz5xKu_upJ2Q_YcAMp2I428HswKvpFnR1h46EDwIWKEGfAiXbf3_DaTTYLMTJfQ0zqsn7RKW4aUtFT8HPVHM814u96LhtYquCcUA7ELq67SeFsBZd-LzG3VXoLADvXZGBC04bZo" class="w-full h-full object-cover" alt="Nhà trình tường H'Mông"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Nhà trình tường</h3>
+                            <p class="text-white/80 text-sm">Kiến trúc truyền thống vùng cao</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="architecture">
+                        <img src="https://i.pinimg.com/1200x/3b/81/19/3b8119ee98ef7bbb57f51b94769f0c62.jpg" class="w-full h-full object-cover" alt="Nhà trình tường H'Mông"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Nhà rông Tây Nguyên</h3>
+                            <p class="text-white/80 text-sm">Kiến trúc truyền thống Tây Nguyên</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 5 - Landscape -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="landscape">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiY0VwDcpE9LEpa9_j0pgBSeX6NtoSLRWSeUvqBAGhPlcTbEIyZqzPr_rTzHgjJmxCGVl-PE2DpJb05CFq1yQIB4mfMeuzspUOb6v0Wc7JTlPAwBx-W4QUSuXbJ7pSxRtS9vy4R8abVQQ7vJyNlUcJqN-m2UU5dquI5I4kRAvlK7nAziDwXqvzfl3amFuOVBuABNLM81Itcdt5IqUh9RBnzQnNxFUeJK6Tptbscv3Z4NkP_2dWmCnG6g8LzASaSnL91s3Axk-i6nQ" class="w-full h-full object-cover" alt="Ruộng bậc thang"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Ruộng bậc thang</h3>
+                            <p class="text-white/80 text-sm">Mù Cang Chải mùa lúa chín</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 6 - Architecture -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="architecture">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVSfhtuDWa9v3lc3eehFGY2pgspQzbKZwM3xcf2ANy4_FMb-E_SV0BjJKI63CUzrw4u-exjUg29uTPrhK4Z0s3geoSmcoEMGclpMACLFrRTIca3lEIAfRnTEiNbRvvmKaf5hX1qBMjgNgMWV5vszPI-6M0U8CxjrldvQBaRkZ84tROB5oJtINKqDDjGtrPfGvBdWG-B_RkvWHDM-OkNWwTb7cdh6qYoXA6vr-WzUtruxLuGI7WyqsKGmUbFyRtufKd1Py_W6EWZXk" class="w-full h-full object-cover" alt="Nhà sàn"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Nhà sàn Tây Bắc</h3>
+                            <p class="text-white/80 text-sm">Kiến trúc hòa quyện thiên nhiên</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 7 - Costume -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="costume">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCUhZq2zcW8HXImvbxz42ReXxzaDTYzgrZ6kpBzSMZ9pXgaQtRYIf9Lc9nM5WqNyDC63qfasEezxH7VgDi44-aOXPFZNu3HpwXxkXwyNiXJ3SRXa4GsGm1fJjLStN7A2bO9d-BUl4vPIGj3ZA4XLKD9ExFCiyzBlIqzuK0go28avmp5G20DAf3xG2G9Os3EoQ8b1bVuir3ME4TN5BXZEmhKUw5-1giQwoIVWCjxtlsISJ0vJ8kz7lTD5yFfsURBXU-rj8rIJEEz3g" class="w-full h-full object-cover" alt="Trang phục Thái"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Trang phục Thái</h3>
+                            <p class="text-white/80 text-sm">Váy xòe và áo gấm truyền thống</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 8 - Festival -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="festival">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA86HkKP-1peDc_dhA2-bjJS9agn7BPXfs-5AeaIIIgNXHOhnBq9BhgFPyksfxdXqJ6vvgMUB4EIcOPVs2x3YQ9EXoLAjxqS4O0JoPgS2DpHkpzWqCRcd5-4lvQ7oTxZyK6Dj9qS0IeqQzSE8wYftbpLcY5R2U6seCvyp9MkPRgD-weEJX_RZrllZ2sTqu5TVowfIsqhyCfdOzSnK7J-TuCQvaKpwW2G1Af2eeGEAIhvYy2Cgu-EtX2xolnDvCfZo9fa4W8e14qRhM" class="w-full h-full object-cover" alt="Không gian Cồng chiêng"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Cồng chiêng Tây Nguyên</h3>
+                            <p class="text-white/80 text-sm">Di sản UNESCO</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 9 - Costume -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="costume">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2pJpvRy0Ai97L1hFGK40AxGhcQCRhkBTbH6UxJq_L-kYHVERmezyz9-te8e0F5AUzntgvIjiU5zNhQFZyWgOr-BoWJfvTGlcLDfVD1LN0f7GKK809iWXFum1N_nK4_yyFIZtHMiNQFjNsAAmL3nEprk-GT_7nM15b57FhYbebQlqwlB1Ws2raenIjESe83PF1jm8zpaOg-jqBonUTSwHN8bWIK2D9qP0kTEEY5xf-A3-6oXMeAIYjyWYpQFaX73N4fSkcKN-V4WQ" class="w-full h-full object-cover" alt="Áo dài Kinh"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Áo dài truyền thống</h3>
+                            <p class="text-white/80 text-sm">Biểu tượng văn hóa Việt Nam</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 10 - Craft -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="craft">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZmTjyHxs7IBMR_YXyQdcf2tE1eV-E76CJL-MdqD_gAEAnia_xZWN98doFBiKpjcMlfzXbot2H9dzqOS0h68-nPNG4Ocr82DmL3Bb4TLqTjjSf-1YWwdTPDfQAOtFORgrmx6yace3Nl92t8GsEU3sdG82xJTAqtWK248tPAIE8NolsBuTkZW2oWsZqBkZIJYkcZrzk6egfv26p6w4tJ8B8aA_G-jDsj27X6bxeSQ8BRMfd44RN4jxgPvEG3Kf0_lflPFyuUupZMms" class="w-full h-full object-cover" alt="Dệt thổ cẩm"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Nghề dệt thổ cẩm</h3>
+                            <p class="text-white/80 text-sm">Kỹ thuật truyền thống</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 11 - Lifestyle -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="lifestyle">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-m-avx8RntOG04mpjf1ptMxpP6xHz-kGSuPbfzB6lkpw3ylVIlbwH8E4TUvDvaHjXNJF-grBgv86bn20FTFuEerhLDF3Rjxi8wMK9txEKvcuUWwcIWK8sw-A-X6_ce5vpmVC--une5WKSD6-PDF2e_Br2Dyu8KxOpsDlL-EHzM9wWZ31pVPy9I79KTqdGPj4VE5EDEdKfiT3-ECinBugvkB1LbZG1WKuPobAnzdbTLMFMEu9dJgOvFFWZ9_bzRF8YBCaPlFTxzUg" class="w-full h-full object-cover" alt="Đàn Tính"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Đàn Tính Tày</h3>
+                            <p class="text-white/80 text-sm">Nhạc cụ dân gian</p>
+                        </div>
+                    </div>
+
+                    <!-- Image 12 - Costume -->
+                    <div class="gallery-item rounded-2xl overflow-hidden shadow-md aspect-[3/4]" data-category="costume">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwKujUb9IjQPm-jEIbnJEJ4FJ2ecBBdJs24TWrJSmWXQ7RQw9bN26Ow9oW2Cb78s8VCKG6x5v-lKHczwShQ8z1i5sp8iaVLbNDExF4N5MOIoVtFe0bqIi3BEn9x5b0_RdYx6IQxl42bJnMQu2cdPh-a41IG3oNDFXgF3CtTn9b98kqVy-TEri618FyZajn_Ftki70dRyT3SmaBpDWAaTgNBcv9rsHMQMIwCs6xLEtrlxXFJUP1ve2_gQM3_xNnbC9l1XhOV6N7qjQ" class="w-full h-full object-cover" alt="Múa Khmer"/>
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold text-lg mb-1">Múa truyền thống Khmer</h3>
+                            <p class="text-white/80 text-sm">Điệu múa Apsara</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- No Results -->
+                <div id="noResults" class="hidden text-center py-20">
+                    <div class="size-20 mx-auto mb-4 rounded-full bg-gray-100 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-4xl text-gray-400">image_not_supported</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-main mb-2">Không tìm thấy hình ảnh</h3>
+                    <p class="text-text-muted">Vui lòng chọn danh mục khác</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-gradient-to-br from-primary/5 to-accent-gold/10 py-16">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-black text-primary mb-2">500+</div>
+                        <p class="text-text-muted font-medium">Hình ảnh</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-black text-primary mb-2">54</div>
+                        <p class="text-text-muted font-medium">Dân tộc</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-black text-primary mb-2">7</div>
+                        <p class="text-text-muted font-medium">Danh mục</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-black text-primary mb-2">100+</div>
+                        <p class="text-text-muted font-medium">Địa điểm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1b120d] text-white/80 py-12 md:py-16">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="size-10 text-white flex items-center justify-center rounded-full bg-accent-red">
+                            <span class="material-symbols-outlined text-[24px]">museum</span>
+                        </div>
+                        <span class="text-white font-bold text-xl font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-white/60">
+                        Dự án bảo tàng số nhằm lưu giữ và phát huy giá trị văn hóa của 54 dân tộc Việt Nam.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Khám phá</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="list.html" class="hover:text-primary transition-colors">Danh sách dân tộc</a></li>
+                        <li><a href="map.html" class="hover:text-primary transition-colors">Bản đồ phân bố</a></li>
+                        <li><a href="heritage.html" class="hover:text-primary transition-colors">Di sản văn hóa</a></li>
+                        <li><a href="festival.html" class="hover:text-primary transition-colors">Lễ hội truyền thống</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Thông tin</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="About.html" class="hover:text-primary transition-colors">Về chúng tôi</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Liên hệ : 0868172958</a></li>
+                       
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Theo dõi</h4>
+                    <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
+                    <div class="flex gap-3">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">thumb_up</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">play_circle</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+                <p>© 2024 Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            let visibleCount = 0;
+
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-white', 'shadow-md');
+                btn.classList.add('bg-white', 'text-text-main', 'border', 'border-gray-200');
+            });
+            event.target.classList.add('active', 'bg-primary', 'text-white', 'shadow-md');
+            event.target.classList.remove('bg-white', 'text-text-main', 'border', 'border-gray-200');
+
+            // Filter items
+            items.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                if (category === 'all' || itemCategory === category) {
+                    item.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                document.getElementById('noResults').classList.remove('hidden');
+            } else {
+                document.getElementById('noResults').classList.add('hidden');
+            }
+        }
+
+        // Initialize active state
+        document.addEventListener('DOMContentLoaded', function() {
+            const activeBtn = document.querySelector('.filter-btn.active');
+            activeBtn.classList.add('bg-primary', 'text-white', 'shadow-md');
+            
+            const otherBtns = document.querySelectorAll('.filter-btn:not(.active)');
+            otherBtns.forEach(btn => {
+                btn.classList.add('bg-white', 'text-text-main', 'border', 'border-gray-200');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dân tộc H'Mông - Triển Lãm 54 Dân Tộc</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols_Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee6c2b",
+                        "accent-red": "#8B0000",
+                        "accent-gold": "#F4E1D2",
+                        "text-main": "#1b120d",
+                        "text-muted": "#9a664c",
+                        "background-light": "#fcf9f8",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light text-text-main font-display antialiased">
+    <!-- Unified Header -->
+    <header class="sticky top-0 z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#e7d7cf]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển Lãm
+                        54 Dân Tộc</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="home.html">Trang chủ</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors" href="list.html">Danh
+                        sách dân tộc</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors" href="map.html">Bản
+                        đồ</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="#heritage">Di sản</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="#about">Giới thiệu</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleDarkMode()"
+                        class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
+                        <span class="material-symbols-outlined text-[20px]">brightness_6</span>
+                    </button>
+                    <button class="md:hidden p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-[1200px] mx-auto px-4 md:px-10 py-6 md:py-10">
+        <!-- Breadcrumbs -->
+        <nav class="flex flex-wrap gap-2 mb-6 text-sm">
+            <a class="text-text-muted hover:text-primary transition-colors" href="#home">Trang chủ</a>
+            <span class="text-text-muted">/</span>
+            <a class="text-text-muted hover:text-primary transition-colors" href="#list">Danh sách dân tộc</a>
+            <span class="text-text-muted">/</span>
+            <span class="text-text-main font-semibold">Dân tộc H'Mông</span>
+        </nav>
+
+        <!-- Page Heading -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-6 border-b border-[#e7d7cf]">
+            <div class="flex flex-col gap-2">
+                <h1 class="text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] text-text-main">
+                    Dân tộc H'Mông
+                </h1>
+                <div class="flex items-center gap-2 text-text-muted text-base md:text-lg">
+                    <span class="material-symbols-outlined text-primary text-[20px]">groups</span>
+                    <p>Nhóm ngôn ngữ: H'Mông - Dao</p>
+                    <span class="mx-2">•</span>
+                    <p>Dân số: ~1.4 triệu người</p>
+                </div>
+            </div>
+            <div class="flex gap-3">
+                <button
+                    class="flex items-center gap-2 px-4 py-2 rounded-full border border-[#e7d7cf] hover:bg-primary/10 hover:border-primary transition-all text-sm font-medium">
+                    <span class="material-symbols-outlined text-[18px]">share</span> Chia sẻ
+                </button>
+                <button
+                    class="flex items-center gap-2 px-4 py-2 rounded-full border border-[#e7d7cf] hover:bg-primary/10 hover:border-primary transition-all text-sm font-medium">
+                    <span class="material-symbols-outlined text-[18px]">bookmark</span> Lưu
+                </button>
+            </div>
+        </div>
+
+        <!-- Two Column Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            <!-- Left Column: Visuals (Sticky) -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                <div class="lg:sticky lg:top-28 space-y-6">
+                    <!-- Main Image -->
+                    <div class="group relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-xl bg-gray-200">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_vaWZYOjvezeR71a7BdkHGtwL3di62XuBMSnQ-Ubys31t9Y-8NS30uJ26wDMI7eMA1_iGaKEvCI2zmsR-j393qZb_yHSbV6GuFQiutyirFVcDRawX1M0EGWtGh7MW1IkmrvWI29QxDSdQwqmqAPk5Vu6qHms4r5fTDIiYiw5vXEfh5WdQU0rnY4AczQuaAD1d_Na5ZUimh7wE704CY95im5QT9d2gXWJE9jQiyoiVnrkYqUH69hNsi8ADyvQk_uwuSY8RLT0AY8I");'>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-60">
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="material-symbols-outlined text-primary">palette</span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-primary">Trang phục</span>
+                            </div>
+                            <p class="text-sm opacity-90 leading-relaxed">Phụ nữ H'Mông nổi tiếng với kỹ thuật vẽ sáp
+                                ong trên vải lanh và trang phục sặc sỡ hoa văn.</p>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Images Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="relative aspect-square rounded-xl overflow-hidden shadow-md group cursor-pointer">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiYO--73LlaLLUKcQ8GqX1Fl38xD6yb-iT-mw7Mj7J0DoWF2BL1bmI2u0ian1NkMwdbPxFAxJk8PN4WLzZV5kbvUzVy3LEXytAAAGx1VySK6WMKU7ctweyqksV0kN10VcJ2JSpxz5xKu_upJ2Q_YcAMp2I428HswKvpFnR1h46EDwIWKEGfAiXbf3_DaTTYLMTJfQ0zqsn7RKW4aUtFT8HPVHM814u96LhtYquCcUA7ELq67SeFsBZd-LzG3VXoLADvXZGBC04bZo");'>
+                            </div>
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                        </div>
+                        <div class="relative aspect-square rounded-xl overflow-hidden shadow-md group cursor-pointer">
+                            <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu1qDM54iW-1wnxzM12gPIuunp_9pX5Je-3hLDZBoyZS7VwmFNG9hSQzhh6bNc-KLjj2o5Uty_FPJj_e5XPS1LpnZ86WI0pOV1sJdn6a7fyPLcE1woOJJiRGUyOiJnT0boyoaWtu-aWcyDBJWU9v8yzDks666yUSByx5nZ5shoJHNfvQby8beT494P59i1rc4EqkFelP-2clJhVtlYP4roLJYkYpDOy3Ysnzuf2DKgcHMFb3vzopyTBjJX6tQ8t6ZXVot4rr7mubA");'>
+                            </div>
+                            <div
+                                class="absolute flex items-center justify-center inset-0 bg-black/30 group-hover:bg-black/20 transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-white opacity-0 group-hover:opacity-100 transition-opacity">fullscreen</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Location Widget -->
+                    <div class="bg-white p-4 rounded-xl border border-[#e7d7cf] shadow-sm">
+                        <div class="flex items-start gap-3">
+                            <div
+                                class="min-w-12 h-12 rounded-lg bg-[#f3ebe7] flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">location_on</span>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-sm mb-1 text-text-main">Phân bố chính</h4>
+                                <p class="text-xs text-text-muted leading-relaxed">
+                                    Hà Giang, Lào Cai, Lai Châu, Sơn La, Điện Biên, Nghệ An.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mt-3 w-full h-24 rounded-lg bg-gray-200 bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAFW3rtHo9EfB1HefpXTYb_kF4_xiXI6P5FHSexaa8V9-mOjXrJEI4o3eMJ1DTK4Ocj5ixCb5upWaLCzNAakKXkwlAHed1Z1KMQPrJXfRGToszOoTmt5saIeYF2MftIWWwielhG-v2cM2ekwmW5rGkwk1wLJ4Pr4Dr-GMB-iu9IaVmI9vPH-zUvr9O2p8E7pBi9ww55v_sAAp34asSIjik5k815Uw7FB4xR0n7Yum7hpHIvnc_9QzHdyZqOlf_ltQA0y5w2TPIq_s");'>
+                        </div>
+                        <button onclick="window.location.hash='#map'"
+                            class="mt-3 w-full py-2 bg-primary/10 hover:bg-primary/20 text-primary rounded-lg text-sm font-semibold transition-colors">
+                            Xem trên bản đồ
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Content -->
+            <div class="lg:col-span-7 flex flex-col">
+                <!-- Tabs Navigation -->
+                <div class="sticky top-[72px] z-30 bg-background-light pb-6 pt-2">
+                    <div class="flex border-b border-[#e7d7cf] gap-8 overflow-x-auto">
+                        <button onclick="switchTab('history')" id="tab-history"
+                            class="tab-btn tab-active flex flex-col items-center justify-center border-b-[3px] pb-3 min-w-fit">
+                            <span class="text-sm font-bold tracking-[0.015em]">Lịch sử & Nguồn gốc</span>
+                        </button>
+                        <button onclick="switchTab('culture')" id="tab-culture"
+                            class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-b-transparent hover:border-b-primary/30 text-text-muted hover:text-primary transition-all pb-3 min-w-fit">
+                            <span class="text-sm font-bold tracking-[0.015em]">Phong tục & Tín ngưỡng</span>
+                        </button>
+                        <button onclick="switchTab('festival')" id="tab-festival"
+                            class="tab-btn flex flex-col items-center justify-center border-b-[3px] border-b-transparent hover:border-b-primary/30 text-text-muted hover:text-primary transition-all pb-3 min-w-fit">
+                            <span class="text-sm font-bold tracking-[0.015em]">Lễ hội Gau Tao</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Content Sections -->
+                <div class="flex flex-col gap-10 pb-20">
+                    <!-- History Section -->
+                    <section id="content-history" class="tab-content">
+                        <h3 class="text-2xl font-bold text-text-main mb-4 flex items-center gap-2">
+                            <span class="block w-1.5 h-6 bg-primary rounded-full"></span>
+                            Lịch sử hình thành
+                        </h3>
+                        <div class="prose prose-lg text-text-main">
+                            <p class="mb-4 text-text-muted leading-loose">
+                                Người H'Mông là một trong những dân tộc có lịch sử di cư lâu đời. Họ đến Việt Nam khoảng
+                                300 năm trước, chủ yếu từ miền Nam Trung Quốc. Cuộc di cư này diễn ra thành nhiều đợt,
+                                rải rác từ cuối thế kỷ 17 đến đầu thế kỷ 20.
+                            </p>
+                            <p class="mb-4 text-text-muted leading-loose">
+                                Họ thường chọn sinh sống ở những vùng núi cao hiểm trở, nơi khí hậu mát mẻ quanh năm,
+                                phù hợp với tập quán canh tác nương rẫy và trồng cây thuốc phiện (trong quá khứ) hoặc
+                                ngô, lúa nương ngày nay. Chính điều kiện địa lý này đã hun đúc nên tính cách kiên cường,
+                                chịu khó và khả năng thích ứng tuyệt vời của người H'Mông.
+                            </p>
+                            <div class="my-6 p-6 bg-[#f3ebe7] rounded-xl border-l-4 border-primary">
+                                <p class="italic font-medium text-text-main text-lg">"Người Mèo ở đâu thì trồng ngô ở
+                                    đó, người Mèo đi đâu thì mang theo cái khèn."</p>
+                                <p class="text-sm text-text-muted mt-2">— Tục ngữ H'Mông</p>
+                            </div>
+                            <p class="text-text-muted leading-loose">
+                                Cộng đồng H'Mông ở Việt Nam được chia thành nhiều nhóm nhỏ dựa trên trang phục và ngôn
+                                ngữ, bao gồm: H'Mông Trắng, H'Mông Hoa, H'Mông Đỏ, H'Mông Đen, H'Mông Xanh và Na Miểu.
+                                Mỗi nhóm lại có những nét văn hóa đặc sắc riêng biệt nhưng vẫn giữ được bản sắc chung
+                                của dân tộc.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- Culture Section -->
+                    <section id="content-culture" class="tab-content hidden">
+                        <h3 class="text-2xl font-bold text-text-main mb-6 flex items-center gap-2">
+                            <span class="block w-1.5 h-6 bg-primary rounded-full"></span>
+                            Đời sống văn hóa
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div
+                                class="bg-white p-6 rounded-xl border border-[#e7d7cf] shadow-sm hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">home_work</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2">Nhà trình tường</h4>
+                                <p class="text-sm text-text-muted leading-relaxed">
+                                    Nhà của người H'Mông thường làm bằng đất nện, lợp ngói âm dương hoặc tranh, giúp giữ
+                                    ấm vào mùa đông và mát vào mùa hè. Kiến trúc nhà thường có 3 gian, gian giữa đặt bàn
+                                    thờ tổ tiên.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-white p-6 rounded-xl border border-[#e7d7cf] shadow-sm hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">checkroom</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2">Trang phục lanh</h4>
+                                <p class="text-sm text-text-muted leading-relaxed">
+                                    Nghề trồng lanh dệt vải là thước đo sự khéo léo của người phụ nữ. Bộ trang phục hoàn
+                                    chỉnh gồm váy xòe xếp nếp, áo xẻ ngực, thắt lưng và xà cạp, nổi bật với kỹ thuật vẽ
+                                    sáp ong.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-white p-6 rounded-xl border border-[#e7d7cf] shadow-sm hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">music_note</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2">Tiếng Khèn</h4>
+                                <p class="text-sm text-text-muted leading-relaxed">
+                                    Khèn (Kèn) vừa là nhạc cụ, vừa là đạo cụ múa. Tiếng khèn vang lên trong các dịp lễ
+                                    tết, đám ma, và là phương tiện để chàng trai tỏ tình với cô gái.
+                                </p>
+                            </div>
+                            <div
+                                class="bg-white p-6 rounded-xl border border-[#e7d7cf] shadow-sm hover:shadow-md transition-shadow">
+                                <div
+                                    class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                                    <span class="material-symbols-outlined">festival</span>
+                                </div>
+                                <h4 class="text-lg font-bold mb-2">Chợ tình</h4>
+                                <p class="text-sm text-text-muted leading-relaxed">
+                                    Nơi gặp gỡ, giao lưu tình cảm của thanh niên nam nữ. Chợ tình Khâu Vai (Hà Giang) là
+                                    một trong những nét văn hóa độc đáo nhất còn lưu giữ.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Festival Section -->
+                    <section id="content-festival" class="tab-content hidden">
+                        <h3 class="text-2xl font-bold text-text-main mb-4 flex items-center gap-2">
+                            <span class="block w-1.5 h-6 bg-primary rounded-full"></span>
+                            Lễ hội Gau Tao
+                        </h3>
+                        <div class="prose prose-lg text-text-main">
+                            <p class="mb-4 text-text-muted leading-loose">
+                                Gau Tao là lễ hội truyền thống quan trọng nhất của người H'Mông, thường được tổ chức vào
+                                tháng Giêng hoặc tháng Hai âm lịch. Đây là dịp để cộng đồng cầu mong một năm mới mưa
+                                thuận gió hòa, mùa màng bội thu.
+                            </p>
+                            <div class="my-6 aspect-video rounded-xl overflow-hidden bg-gray-200">
+                                <div class="w-full h-full bg-cover bg-center"
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu1qDM54iW-1wnxzM12gPIuunp_9pX5Je-3hLDZBoyZS7VwmFNG9hSQzhh6bNc-KLjj2o5Uty_FPJj_e5XPS1LpnZ86WI0pOV1sJdn6a7fyPLcE1woOJJiRGUyOiJnT0boyoaWtu-aWcyDBJWU9v8yzDks666yUSByx5nZ5shoJHNfvQby8beT494P59i1rc4EqkFelP-2clJhVtlYP4roLJYkYpDOy3Ysnzuf2DKgcHMFb3vzopyTBjJX6tQ8t6ZXVot4rr7mubA");'>
+                                </div>
+                            </div>
+                            <p class="text-text-muted leading-loose">
+                                Trong lễ hội, người H'Mông cùng nhau múa khèn, hát then, tham gia các trò chơi dân gian
+                                như ném pao, đánh quay, kéo co. Không khí tưng bừng, vui tươi lan tỏa khắp vùng cao, thể
+                                hiện tinh thần đoàn kết gắn bó của cộng đồng.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Ethnicities -->
+        <section class="mt-20 pt-10 border-t border-[#e7d7cf]">
+            <h3 class="text-2xl font-bold text-text-main mb-8">Dân tộc liên quan</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Kinh -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/6/6f/Ao_dai_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Kinh</h4>
+                </a>
+
+                <!-- Tày -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/5/5a/Tay_ethnic_group_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Tày</h4>
+                </a>
+
+                <!-- Thái -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/82/Thai_ethnic_costume_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Thái</h4>
+                </a>
+
+                <!-- Mường -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/4/4c/Muong_ethnic_group.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Mường</h4>
+                </a>
+
+                <!-- Khmer -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/1/18/Khmer_people_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Khmer</h4>
+                </a>
+
+                <!-- Hoa -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/9c/Hoa_ethnic_group_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Hoa</h4>
+                </a>
+
+                <!-- Nùng -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/2/29/Nung_people_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Nùng</h4>
+                </a>
+
+                <!-- H'Mông -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/71/Hmong_people_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">H’Mông</h4>
+                </a>
+
+                <!-- Dao -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/b/b9/Dao_Do_ethnic_group.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Dao</h4>
+                </a>
+
+                <!-- Gia Rai -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/0/0a/Jarai_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Gia Rai</h4>
+                </a>
+
+                <!-- Ê Đê -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/3/36/Ede_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Ê Đê</h4>
+                </a>
+
+                <!-- Ba Na -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/95/Bahnar_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Ba Na</h4>
+                </a>
+
+                <!-- Xơ Đăng -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/5/52/Xo_Dang_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Xơ Đăng</h4>
+                </a>
+
+                <!-- Sán Chay -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/89/San_Chay_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Sán Chay</h4>
+                </a>
+
+                <!-- Chăm -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/6/63/Cham_people_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Chăm</h4>
+                </a>
+
+                <!-- Sán Dìu -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/0/01/San_Diu_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Sán Dìu</h4>
+                </a>
+
+                <!-- Hrê -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/a/a5/Hre_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Hrê</h4>
+                </a>
+
+                <!-- Cơ Ho -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/1/1b/Koho_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Cơ Ho</h4>
+                </a>
+
+                <!-- Raglai -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/d/d7/Raglai_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Raglai</h4>
+                </a>
+
+                <!-- Chu Ru -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/7e/Chu_Ru_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Chu Ru</h4>
+                </a>
+                <!-- Bru – Vân Kiều -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/3/3a/Bru-Van_Kieu_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Bru – Vân Kiều</h4>
+                </a>
+
+                <!-- Thổ -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/1/1e/Tho_people_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Thổ</h4>
+                </a>
+
+                <!-- Khơ Mú -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/9e/Kho_Mu_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Khơ Mú</h4>
+                </a>
+
+                <!-- Xtiêng -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/6/6d/Stieng_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Xtiêng</h4>
+                </a>
+
+                <!-- Lào -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/4/45/Lao_people_Vietnam.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Lào</h4>
+                </a>
+
+                <!-- La Chí -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/2/25/La_Chi_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">La Chí</h4>
+                </a>
+
+                <!-- La Ha -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/7f/La_Ha_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">La Ha</h4>
+                </a>
+
+                <!-- Phù Lá -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/4/44/Phu_La_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Phù Lá</h4>
+                </a>
+
+                <!-- La Hủ -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/6/63/La_Hu_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">La Hủ</h4>
+                </a>
+
+                <!-- Lô Lô -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/8b/Lo_Lo_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Lô Lô</h4>
+                </a>
+
+                <!-- Chứt -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Chut_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Chứt</h4>
+                </a>
+
+                <!-- Mảng -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/9a/Mang_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Mảng</h4>
+                </a>
+
+                <!-- Pà Thẻn -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/f/f1/Pa_Then_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Pà Thẻn</h4>
+                </a>
+
+                <!-- Cờ Lao -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/2/2d/Co_Lao_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Cờ Lao</h4>
+                </a>
+
+                <!-- Bố Y -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/5/53/Bo_Y_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Bố Y</h4>
+                </a>
+
+                <!-- Ngái -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/6/6b/Ngai_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Ngái</h4>
+                </a>
+
+                <!-- Si La -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/4/49/Si_La_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Si La</h4>
+                </a>
+
+                <!-- Pu Péo -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/9/92/Pu_Peo_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Pu Péo</h4>
+                </a>
+
+                <!-- Rơ Măm -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/8/8d/Ro_Mam_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Rơ Măm</h4>
+                </a>
+
+                <!-- Brâu -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/1/12/Brau_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Brâu</h4>
+                </a>
+
+                <!-- Ơ Đu -->
+                <a href="#detail" class="group">
+                    <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                        <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                            style='background-image:url("https://upload.wikimedia.org/wikipedia/commons/5/59/O_Du_people.jpg");'>
+                        </div>
+                    </div>
+                    <h4 class="font-bold group-hover:text-primary transition-colors">Ơ Đu</h4>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1b120d] text-white/80 py-12 md:py-16 mt-auto">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="size-10 text-white flex items-center justify-center rounded-full bg-accent-red">
+                            <span class="material-symbols-outlined text-[24px]">museum</span>
+                        </div>
+                        <span class="text-white font-bold text-xl font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-white/60">
+                        Dự án bảo tàng số nhằm lưu giữ và phát huy giá trị văn hóa của 54 dân tộc Việt Nam.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Khám phá</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#list">Danh sách dân tộc</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#map">Bản đồ phân bố</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#heritage">Di sản văn hóa</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Lễ hội truyền thống</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Thông tin</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#about">Về chúng tôi</a></li>
+                        <li><a class="hover:text-primary transition-colors">Liên hệ : 0868172958</a></li>
+
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Theo dõi</h4>
+                    <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
+                    <div class="flex gap-3">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">thumb_up</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">play_circle</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+                <p>© 2024 Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function switchTab(tabName) {
+            // Hide all content sections
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.add('hidden');
+            });
+
+            // Remove active state from all tabs
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('tab-active', 'border-b-primary', 'text-text-main');
+                btn.classList.add('border-b-transparent', 'text-text-muted');
+            });
+
+            // Show selected content
+            document.getElementById('content-' + tabName).classList.remove('hidden');
+
+            // Add active state to selected tab
+            const activeTab = document.getElementById('tab-' + tabName);
+            activeTab.classList.add('tab-active', 'border-b-primary', 'text-text-main');
+            activeTab.classList.remove('border-b-transparent', 'text-text-muted');
+        }
+    </script>
+</body>
+
+</html>

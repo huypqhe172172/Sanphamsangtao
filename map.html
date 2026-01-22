@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Bản Đồ Phân Bố - 54 Dân Tộc Việt Nam</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee6c2b",
+                        "accent-red": "#8B0000",
+                        "accent-gold": "#F4E1D2",
+                        "text-main": "#1b120d",
+                        "text-muted": "#9a664c",
+                        "background-light": "#fcf9f8",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .region-marker {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .region-marker:hover {
+            transform: scale(1.1);
+            filter: brightness(1.2);
+        }
+        .region-active {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body class="bg-background-light text-text-main font-display antialiased overflow-x-hidden">
+    <!-- Unified Header -->
+    <header class="sticky top-0 z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#e7d7cf]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
+                        <span class="material-symbols-outlined text-[32px]">museum</span>
+                    </div>
+                    <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển Lãm 54 Dân Tộc</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors" href="home.html">Trang chủ</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors" href="list.html">Danh sách</a>
+                    <a class="text-primary text-sm font-bold transition-colors" href="map.html">Bản đồ</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors" href="gallery.html">Hình ảnh</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors" href="festival.html">Lễ hội</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors" href="heritage.html">Di sản</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors" href="about.html">Giới thiệu</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleDarkMode()" class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
+                        <span class="material-symbols-outlined text-[20px]">brightness_6</span>
+                    </button>
+                    <button class="md:hidden p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-primary/5 to-accent-gold/10 py-12 border-b border-[#e7d7cf]">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">map</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-black text-text-main mb-4">Bản Đồ Phân Bố Dân Tộc</h1>
+                    <p class="text-lg text-text-muted">
+                        Khám phá vị trí sinh sống của 54 dân tộc trên khắp dải đất Việt Nam từ Bắc chí Nam
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Container -->
+        <section class="py-8">
+            <div class="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Sidebar - Region List -->
+                    <div class="lg:col-span-3">
+                        <div class="bg-white rounded-2xl border border-[#e7d7cf] p-6 sticky top-28">
+                            <h3 class="text-xl font-bold text-text-main mb-6 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">filter_alt</span>
+                                Vùng miền
+                            </h3>
+                            <div class="space-y-3">
+                                <button onclick="selectRegion('all')" class="region-btn region-active w-full text-left px-4 py-3 rounded-lg transition-all flex items-center justify-between">
+                                    <span class="font-semibold">Tất cả vùng</span>
+                                    <span class="text-sm text-text-muted">54 dân tộc</span>
+                                </button>
+                                <button onclick="selectRegion('north')" class="region-btn w-full text-left px-4 py-3 rounded-lg transition-all hover:bg-primary/5">
+                                    <div class="flex items-center gap-3 mb-1">
+                                        <div class="size-3 rounded-full bg-blue-500"></div>
+                                        <span class="font-semibold">Miền Bắc</span>
+                                    </div>
+                                    <p class="text-sm text-text-muted pl-6">Vùng núi phía Bắc, Đông Bắc</p>
+                                </button>
+                                <button onclick="selectRegion('central')" class="region-btn w-full text-left px-4 py-3 rounded-lg transition-all hover:bg-primary/5">
+                                    <div class="flex items-center gap-3 mb-1">
+                                        <div class="size-3 rounded-full bg-green-500"></div>
+                                        <span class="font-semibold">Miền Trung</span>
+                                    </div>
+                                    <p class="text-sm text-text-muted pl-6">Tây Nguyên, Duyên hải miền Trung</p>
+                                </button>
+                                <button onclick="selectRegion('south')" class="region-btn w-full text-left px-4 py-3 rounded-lg transition-all hover:bg-primary/5">
+                                    <div class="flex items-center gap-3 mb-1">
+                                        <div class="size-3 rounded-full bg-yellow-500"></div>
+                                        <span class="font-semibold">Miền Nam</span>
+                                    </div>
+                                    <p class="text-sm text-text-muted pl-6">Đồng bằng sông Cửu Long</p>
+                                </button>
+                            </div>
+
+                            <!-- Stats -->
+                            <div class="mt-8 pt-6 border-t border-[#e7d7cf]">
+                                <h4 class="text-sm font-bold text-text-muted uppercase mb-4">Thống kê</h4>
+                                <div class="space-y-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm">Tổng dân tộc</span>
+                                        <span class="font-bold text-primary">54</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm">Ngôn ngữ</span>
+                                        <span class="font-bold">8 nhóm</span>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm">Dân số thiểu số</span>
+                                        <span class="font-bold">~14%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Map Area -->
+                    <div class="lg:col-span-9">
+                        <div class="bg-white rounded-2xl border border-[#e7d7cf] p-8">
+                            <!-- Map SVG Illustration -->
+                            <div class="relative w-full aspect-[3/4] bg-gradient-to-br from-blue-50 to-green-50 rounded-xl overflow-hidden">
+                                <svg viewBox="0 0 400 600" class="w-full h-full">
+                                    <!-- Vietnam Map Outline (Simplified) -->
+                                    <path d="M200 50 L220 80 L210 120 L230 150 L220 200 L240 250 L230 300 L220 350 L200 400 L190 450 L180 500 L170 550 L190 580 L200 550 L210 520 L200 480 L210 440 L200 400 L210 350 L200 300 L210 250 L200 200 L180 150 L190 120 L180 80 Z" 
+                                          fill="#e7f3e7" 
+                                          stroke="#2d7a2d" 
+                                          stroke-width="2"
+                                          class="transition-all duration-300"/>
+                                    
+                                    <!-- North Region Markers -->
+                                    <g class="region-north">
+                                        <circle cx="200" cy="100" r="8" fill="#3b82f6" class="region-marker" onclick="showEthnicInfo('hmong')"/>
+                                        <circle cx="220" cy="120" r="6" fill="#3b82f6" class="region-marker" onclick="showEthnicInfo('dao')"/>
+                                        <circle cx="180" cy="130" r="7" fill="#3b82f6" class="region-marker" onclick="showEthnicInfo('tay')"/>
+                                        <circle cx="210" cy="150" r="6" fill="#3b82f6" class="region-marker" onclick="showEthnicInfo('thai')"/>
+                                    </g>
+
+                                    <!-- Central Region Markers -->
+                                    <g class="region-central">
+                                        <circle cx="200" cy="250" r="7" fill="#22c55e" class="region-marker" onclick="showEthnicInfo('ede')"/>
+                                        <circle cx="220" cy="280" r="6" fill="#22c55e" class="region-marker" onclick="showEthnicInfo('jarai')"/>
+                                        <circle cx="190" cy="320" r="6" fill="#22c55e" class="region-marker" onclick="showEthnicInfo('bahnar')"/>
+                                        <circle cx="230" cy="200" r="5" fill="#22c55e" class="region-marker" onclick="showEthnicInfo('cham')"/>
+                                    </g>
+
+                                    <!-- South Region Markers -->
+                                    <g class="region-south">
+                                        <circle cx="180" cy="500" r="7" fill="#eab308" class="region-marker" onclick="showEthnicInfo('khmer')"/>
+                                        <circle cx="200" cy="520" r="6" fill="#eab308" class="region-marker" onclick="showEthnicInfo('kinh')"/>
+                                        <circle cx="190" cy="480" r="5" fill="#eab308" class="region-marker" onclick="showEthnicInfo('hoa')"/>
+                                    </g>
+
+                                    <!-- Labels -->
+                                    <text x="200" y="40" text-anchor="middle" class="fill-text-main text-sm font-bold">Miền Bắc</text>
+                                    <text x="200" y="220" text-anchor="middle" class="fill-text-main text-sm font-bold">Miền Trung</text>
+                                    <text x="200" y="560" text-anchor="middle" class="fill-text-main text-sm font-bold">Miền Nam</text>
+                                </svg>
+
+                                <!-- Legend -->
+                                <div class="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
+                                    <h4 class="text-xs font-bold text-text-muted uppercase mb-2">Chú thích</h4>
+                                    <div class="space-y-2 text-xs">
+                                        <div class="flex items-center gap-2">
+                                            <div class="size-3 rounded-full bg-blue-500"></div>
+                                            <span>Miền Bắc</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="size-3 rounded-full bg-green-500"></div>
+                                            <span>Miền Trung</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <div class="size-3 rounded-full bg-yellow-500"></div>
+                                            <span>Miền Nam</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Info Card -->
+                            <div id="ethnicInfo" class="mt-6 p-6 bg-gradient-to-r from-primary/5 to-accent-gold/5 rounded-xl border border-primary/20 hidden">
+                                <div class="flex items-start gap-4">
+                                    <div id="ethnicImage" class="size-20 rounded-lg bg-gray-200 flex-shrink-0 bg-cover bg-center"></div>
+                                    <div class="flex-grow">
+                                        <h4 id="ethnicName" class="text-xl font-bold text-text-main mb-1"></h4>
+                                        <p id="ethnicRegion" class="text-sm text-text-muted mb-3"></p>
+                                        <p id="ethnicDescription" class="text-sm text-text-main leading-relaxed mb-3"></p>
+                                        <button onclick="window.location.hash='#detail'" class="text-sm font-semibold text-primary hover:text-primary/80 flex items-center gap-1">
+                                            Xem chi tiết <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                            <a href="list.html" class="group bg-white p-6 rounded-xl border border-[#e7d7cf] hover:border-primary/50 hover:shadow-md transition-all">
+                                <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">view_list</span>
+                                </div>
+                                <h4 class="font-bold text-text-main mb-1">Danh sách đầy đủ</h4>
+                                <p class="text-sm text-text-muted">Xem tất cả 54 dân tộc</p>
+                            </a>
+                            <a href="heritage.html" class="group bg-white p-6 rounded-xl border border-[#e7d7cf] hover:border-primary/50 hover:shadow-md transition-all">
+                                <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">temple_buddhist</span>
+                                </div>
+                                <h4 class="font-bold text-text-main mb-1">Di sản văn hóa</h4>
+                                <p class="text-sm text-text-muted">Khám phá di sản UNESCO</p>
+                            </a>
+                            <a href="home.html" class="group bg-white p-6 rounded-xl border border-[#e7d7cf] hover:border-primary/50 hover:shadow-md transition-all">
+                                <div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary mb-3 group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined">home</span>
+                                </div>
+                                <h4 class="font-bold text-text-main mb-1">Về trang chủ</h4>
+                                <p class="text-sm text-text-muted">Quay lại trang chính</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1b120d] text-white/80 py-12 md:py-16 mt-16">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="size-10 text-white flex items-center justify-center rounded-full bg-accent-red">
+                            <span class="material-symbols-outlined text-[24px]">museum</span>
+                        </div>
+                        <span class="text-white font-bold text-xl font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-white/60">
+                        Dự án bảo tàng số nhằm lưu giữ và phát huy giá trị văn hóa của 54 dân tộc Việt Nam.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Khám phá</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="list.html">Danh sách dân tộc</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="map.html">Bản đồ phân bố</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="heritage.html">Di sản văn hóa</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="festival.html">Lễ hội truyền thống</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Thông tin</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="#about.html">Về chúng tôi</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Liên hệ</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Chính sách bảo mật</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Theo dõi</h4>
+                    <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
+                    <div class="flex gap-3">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">thumb_up</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">play_circle</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+                <p>© 2024 Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const ethnicData = {
+            'hmong': {
+                name: 'Dân tộc H\'Mông',
+                region: 'Hà Giang, Lào Cai, Sơn La, Lai Châu',
+                description: 'Người H\'Mông nổi tiếng với trang phục sặc sỡ, kỹ thuật vẽ sáp ong và lễ hội Gau Tao truyền thống.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKm89qY3i6ceZzXa5s3r6Yz9zQPZ5fkFAsxFhlWbs7cIrOlz_-l94PKmVj5Nq_Wd9mKwqTLUnLbdp3ljfgid2wNSpJFtxe1nHwVnmIqcMckMCRLobAo4SehSdBEgfZHAwLKerWXStEoxNls3rlaNTymYp_wHXnRDQMi4BzHs1zh_b5l8qR4c5vexuNg5X2mjMjzvzbxghP5AB8c3omt9t-6LJeFsL-sIbThhNsCxj29VISOGFeMdbjbPUsAmroJjLuj9tdq50jIM0")'
+            },
+            'dao': {
+                name: 'Dân tộc Dao',
+                region: 'Tuyên Quang, Hà Giang, Lào Cai',
+                description: 'Người Dao nổi bật với trang phục đỏ đặc trưng và nghề thêu thùa tinh xảo.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZSoSLoJM0tAtlkhmBC9rhiiS75DNCU9sIs1esiuTwzI0iEScJNNPabAmxpV54sH3bHFWpDJcpF8zO2khnLM5OVCmSzrTUjutd6Y28ZPgU7Jmwr_kcNa81Y9cB3L8OaWObRoBP3kbG5cdI6YnfpDhHsVei4Z7xEBeTb_8iksqOgLoolTqAIze53bcFZnnq5n1O39HFNFEahRs7-sT2_hlVz7udO8A70e3MH6DOvLWgiFZw85ZvN_YIAU8vc9lKjdrQ_Wf4fzX75UQ")'
+            },
+            'tay': {
+                name: 'Dân tộc Tày',
+                region: 'Cao Bằng, Lạng Sơn, Bắc Kạn',
+                description: 'Tày là dân tộc thiểu số đông nhất Việt Nam, có nền văn hóa phong phú với then và sính.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-m-avx8RntOG04mpjf1ptMxpP6xHz-kGSuPbfzB6lkpw3ylVIlbwH8E4TUvDvaHjXNJF-grBgv86bn20FTFuEerhLDF3Rjxi8wMK9txEKvcuUWwcIWK8sw-A-X6_ce5vpmVC--une5WKSD6-PDF2e_Br2Dyu8KxOpsDlL-EHzM9wWZ31pVPy9I79KTqdGPj4VE5EDEdKfiT3-ECinBugvkB1LbZG1WKuPobAnzdbTLMFMEu9dJgOvFFWZ9_bzRF8YBCaPlFTxzUg")'
+            },
+            'thai': {
+                name: 'Dân tộc Thái',
+                region: 'Sơn La, Điện Biên, Nghệ An',
+                description: 'Người Thái nổi tiếng với nhà sàn, vải thổ cẩm và lễ hội xên bản, xên mường.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCUhZq2zcW8HXImvbxz42ReXxzaDTYzgrZ6kpBzSMZ9pXgaQtRYIf9Lc9nM5WqNyDC63qfasEezxH7VgDi44-aOXPFZNu3HpwXxkXwyNiXJ3SRXa4GsGm1fJjLStN7A2bO9d-BUl4vPIGj3ZA4XLKD9ExFCiyzBlIqzuK0go28avmp5G20DAf3xG2G9Os3EoQ8b1bVuir3ME4TN5BXZEmhKUw5-1giQwoIVWCjxtlsISJ0vJ8kz7lTD5yFfsURBXU-rj8rIJEEz3g")'
+            },
+            'ede': {
+                name: 'Dân tộc Ê Đê',
+                region: 'Đắk Lắk, Gia Lai, Phú Yên',
+                description: 'Người Ê Đê nổi tiếng với nhà dài, văn hóa cồng chiêng và chế độ mẫu hệ.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeMaw8p3GreDE-AWEPLtcBVkWQXh73VZoLR34R5KIUxsZ_0FngRmpzZ-PxLTq3LyYwBOAGZaKGSwxUt32mbdflWUI9_MhN0Wgtsa8eFLZIlVcUjYceKrFJLbUVpqKGAkLHfUpMXv4m6D5QqbyM1ayXw6_t_oU9Yy_r8-0Sy0J5n9vrU6fSEu0mISJwY_JHkEtH55-wwzhBb6n7zFnYJwYkgsJvDb3ttX3liZvmx-gX_RJCgBOfVWr397ltAJUNXN_xvWAtNY7Zn1U")'
+            },
+            'jarai': {
+                name: 'Dân tộc Gia Rai',
+                region: 'Gia Lai, Kon Tum',
+                description: 'Người Gia Rai có nghệ thuật điêu khắc độc đáo và lễ hội cúng cơm mới.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeMaw8p3GreDE-AWEPLtcBVkWQXh73VZoLR34R5KIUxsZ_0FngRmpzZ-PxLTq3LyYwBOAGZaKGSwxUt32mbdflWUI9_MhN0Wgtsa8eFLZIlVcUjYceKrFJLbUVpqKGAkLHfUpMXv4m6D5QqbyM1ayXw6_t_oU9Yy_r8-0Sy0J5n9vrU6fSEu0mISJwY_JHkEtH55-wwzhBb6n7zFnYJwYkgsJvDb3ttX3liZvmx-gX_RJCgBOfVWr397ltAJUNXN_xvWAtNY7Zn1U")'
+            },
+            'bahnar': {
+                name: 'Dân tộc Ba Na',
+                region: 'Gia Lai, Kon Tum, Bình Định',
+                description: 'Người Ba Na nổi tiếng với nhà rông và lễ hội đâm trâu.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCeMaw8p3GreDE-AWEPLtcBVkWQXh73VZoLR34R5KIUxsZ_0FngRmpzZ-PxLTq3LyYwBOAGZaKGSwxUt32mbdflWUI9_MhN0Wgtsa8eFLZIlVcUjYceKrFJLbUVpqKGAkLHfUpMXv4m6D5QqbyM1ayXw6_t_oU9Yy_r8-0Sy0J5n9vrU6fSEu0mISJwY_JHkEtH55-wwzhBb6n7zFnYJwYkgsJvDb3ttX3liZvmx-gX_RJCgBOfVWr397ltAJUNXN_xvWAtNY7Zn1U")'
+            },
+            'cham': {
+                name: 'Dân tộc Chăm',
+                region: 'Ninh Thuận, Bình Thuận',
+                description: 'Người Chăm có nền văn minh lâu đời với tháp Chăm và nghệ thuật dệt thổ cẩm.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8t01EbxV7MIdVicoSJw2BQp6yNLpCBlulg4Lns7DuAfNDEE2ry5AwIw3OqRnX9FU58l0yF9QanP8WZSvXyp11qGsec-a7oNf-GU-ic7y_uFga0Y9y-FACDUTFV0K6n6N1B6w1soRA4hOH0pmQMBSRFx7ChOShql37DcYJ9nJlOR4KMF8zyWyBlxmAHLLKvKfKnTOK2OeBreMyNLTTTl1TeVnbCtxyAZs7uOCU20BQjpe_r6-Kw6xro6F67aASpk1rTtz3hrno3o4")'
+            },
+            'khmer': {
+                name: 'Dân tộc Khmer',
+                region: 'Sóc Trăng, Trà Vinh, An Giang',
+                description: 'Người Khmer có nền văn hóa phong phú với chùa Khmer và lễ hội Ok Om Bok.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwKujUb9IjQPm-jEIbnJEJ4FJ2ecBBdJs24TWrJSmWXQ7RQw9bN26Ow9oW2Cb78s8VCKG6x5v-lKHczwShQ8z1i5sp8iaVLbNDExF4N5MOIoVtFe0bqIi3BEn9x5b0_RdYx6IQxl42bJnMQu2cdPh-a41IG3oNDFXgF3CtTn9b98kqVy-TEri618FyZajn_Ftki70dRyT3SmaBpDWAaTgNBcv9rsHMQMIwCs6xLEtrlxXFJUP1ve2_gQM3_xNnbC9l1XhOV6N7qjQ")'
+            },
+            'kinh': {
+                name: 'Dân tộc Kinh',
+                region: 'Khắp cả nước',
+                description: 'Người Kinh là dân tộc đa số, chiếm khoảng 86% dân số Việt Nam.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2pJpvRy0Ai97L1hFGK40AxGhcQCRhkBTbH6UxJq_L-kYHVERmezyz9-te8e0F5AUzntgvIjiU5zNhQFZyWgOr-BoWJfvTGlcLDfVD1LN0f7GKK809iWXFum1N_nK4_yyFIZtHMiNQFjNsAAmL3nEprk-GT_7nM15b57FhYbebQlqwlB1Ws2raenIjESe83PF1jm8zpaOg-jqBonUTSwHN8bWIK2D9qP0kTEEY5xf-A3-6oXMeAIYjyWYpQFaX73N4fSkcKN-V4WQ")'
+            },
+            'hoa': {
+                name: 'Dân tộc Hoa',
+                region: 'Tp. Hồ Chí Minh, An Giang, Kiên Giang',
+                description: 'Người Hoa có truyền thống thương mại lâu đời và văn hóa đặc sắc.',
+                image: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2pJpvRy0Ai97L1hFGK40AxGhcQCRhkBTbH6UxJq_L-kYHVERmezyz9-te8e0F5AUzntgvIjiU5zNhQFZyWgOr-BoWJfvTGlcLDfVD1LN0f7GKK809iWXFum1N_nK4_yyFIZtHMiNQFjNsAAmL3nEprk-GT_7nM15b57FhYbebQlqwlB1Ws2raenIjESe83PF1jm8zpaOg-jqBonUTSwHN8bWIK2D9qP0kTEEY5xf-A3-6oXMeAIYjyWYpQFaX73N4fSkcKN-V4WQ")'
+            }
+        };
+
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function selectRegion(region) {
+            // Update button states
+            document.querySelectorAll('.region-btn').forEach(btn => {
+                btn.classList.remove('region-active', 'bg-primary/10', 'border-l-4', 'border-primary');
+            });
+            event.target.classList.add('region-active', 'bg-primary/10', 'border-l-4', 'border-primary');
+
+            // Show/hide map markers
+            document.querySelectorAll('.region-north, .region-central, .region-south').forEach(group => {
+                group.style.opacity = '0.3';
+            });
+
+            if (region === 'all') {
+                document.querySelectorAll('.region-north, .region-central, .region-south').forEach(group => {
+                    group.style.opacity = '1';
+                });
+            } else {
+                document.querySelector('.region-' + region).style.opacity = '1';
+            }
+        }
+
+        function showEthnicInfo(ethnicKey) {
+            const ethnic = ethnicData[ethnicKey];
+            if (!ethnic) return;
+
+            document.getElementById('ethnicInfo').classList.remove('hidden');
+            document.getElementById('ethnicName').textContent = ethnic.name;
+            document.getElementById('ethnicRegion').textContent = ethnic.region;
+            document.getElementById('ethnicDescription').textContent = ethnic.description;
+            document.getElementById('ethnicImage').style.backgroundImage = ethnic.image;
+
+            // Scroll to info card
+            document.getElementById('ethnicInfo').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>

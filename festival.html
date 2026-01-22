@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lễ Hội Truyền Thống - Triển Lãm 54 Dân Tộc</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee6c2b",
+                        "accent-red": "#8B0000",
+                        "accent-gold": "#F4E1D2",
+                        "text-main": "#1b120d",
+                        "text-muted": "#9a664c",
+                        "background-light": "#fcf9f8",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-text-main font-display antialiased">
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#e7d7cf]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <a href="Home.html" class="flex items-center gap-3">
+                        <div class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
+                            <span class="material-symbols-outlined text-[32px]">museum</span>
+                        </div>
+                        <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="home.html" class="text-sm font-medium transition-colors hover:text-primary">Trang chủ</a>
+                    <a href="list.html" class="text-sm font-medium transition-colors hover:text-primary">Danh sách</a>
+                    <a href="map.html" class="text-sm font-medium transition-colors hover:text-primary">Bản đồ</a>
+                    <a href="gallery.html" class="text-sm font-medium transition-colors hover:text-primary">Hình ảnh</a>
+                    <a href="festival.html" class="text-primary text-sm font-bold transition-colors">Lễ hội</a>
+                    <a href="heritage.html" class="text-sm font-medium transition-colors hover:text-primary">Di sản</a>
+                    <a href="about.html" class="text-sm font-medium transition-colors hover:text-primary">Giới thiệu</a>
+                </nav>
+                <button onclick="toggleDarkMode()" class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">brightness_6</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-20 overflow-hidden bg-gradient-to-br from-primary/10 via-accent-gold/5 to-background-light">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">celebration</span>
+                        <span class="text-sm font-bold text-primary uppercase tracking-wider">Văn hóa truyền thống</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black text-text-main mb-6 leading-tight">
+                        Lễ Hội Truyền Thống<br/>
+                        <span class="text-primary">54 Dân Tộc</span>
+                    </h1>
+                    <p class="text-lg text-text-muted leading-relaxed mb-8">
+                        Khám phá những lễ hội đặc sắc, lưu giữ tinh hoa văn hóa và tín ngưỡng của các dân tộc Việt Nam qua hàng nghìn năm lịch sử.
+                    </p>
+                    <div class="flex gap-3">
+                        <div class="px-4 py-2 bg-white rounded-full border border-[#e7d7cf] text-sm font-semibold">
+                            <span class="text-primary">50+</span> Lễ hội
+                        </div>
+                        <div class="px-4 py-2 bg-white rounded-full border border-[#e7d7cf] text-sm font-semibold">
+                            <span class="text-primary">54</span> Dân tộc
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar Filter -->
+        <section class="border-b border-[#e7d7cf] bg-white sticky top-20 z-40">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-text-muted">calendar_month</span>
+                    <p class="font-semibold text-sm">Lọc theo tháng:</p>
+                    <div class="flex gap-2 overflow-x-auto no-scrollbar">
+                        <button onclick="filterByMonth('all')" class="month-btn active px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap">Tất cả</button>
+                        <button onclick="filterByMonth('1')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 1</button>
+                        <button onclick="filterByMonth('2')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 2</button>
+                        <button onclick="filterByMonth('3')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 3</button>
+                        <button onclick="filterByMonth('4')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 4</button>
+                        <button onclick="filterByMonth('5')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 5</button>
+                        <button onclick="filterByMonth('6')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 6</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Festivals List -->
+        <section class="py-12">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Festival Card 1 - Gau Tao -->
+                <div class="festival-card mb-8" data-month="1">
+                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu1qDM54iW-1wnxzM12gPIuunp_9pX5Je-3hLDZBoyZS7VwmFNG9hSQzhh6bNc-KLjj2o5Uty_FPJj_e5XPS1LpnZ86WI0pOV1sJdn6a7fyPLcE1woOJJiRGUyOiJnT0boyoaWtu-aWcyDBJWU9v8yzDks666yUSByx5nZ5shoJHNfvQby8beT494P59i1rc4EqkFelP-2clJhVtlYP4roLJYkYpDOy3Ysnzuf2DKgcHMFb3vzopyTBjJX6tQ8t6ZXVot4rr7mubA");'></div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 1-2</div>
+                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">H'Mông</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Gau Tao</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Gau Tao là lễ hội truyền thống quan trọng nhất của người H'Mông, thường được tổ chức vào tháng Giêng hoặc tháng Hai âm lịch. Lễ hội là dịp để cộng đồng cầu mong một năm mới mưa thuận gió hòa, mùa màng bội thu.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Hà Giang, Lào Cai, Lai Châu</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>3-5 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
+                                        Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Festival Card 2 - Chợ Tình Khâu Vai -->
+                <div class="festival-card mb-8" data-month="3">
+                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKm89qY3i6ceZzXa5s3r6Yz9zQPZ5fkFAsxFhlWbs7cIrOlz_-l94PKmVj5Nq_Wd9mKwqTLUnLbdp3ljfgid2wNSpJFtxe1nHwVnmIqcMckMCRLobAo4SehSdBEgfZHAwLKerWXStEoxNls3rlaNTymYp_wHXnRDQMi4BzHs1zh_b5l8qR4c5vexuNg5X2mjMjzvzbxghP5AB8c3omt9t-6LJeFsL-sIbThhNsCxj29VISOGFeMdbjbPUsAmroJjLuj9tdq50jIM0");'></div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 3</div>
+                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">H'Mông, Dao, Tày</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Chợ Tình Khâu Vai</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Chợ tình Khâu Vai là một nét văn hóa độc đáo của vùng cao Hà Giang, diễn ra vào ngày 27 tháng 3 âm lịch hàng năm. Đây là dịp để những cặp đôi đã có gia đình được gặp lại tình yêu thuở ban đầu, chia sẻ những tâm sự và kỷ niệm.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Hà Giang (Mèo Vạc)</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>1 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
+                                        Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Festival Card 3 - Hội Cồng Chiêng -->
+                <div class="festival-card mb-8" data-month="3">
+                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA86HkKP-1peDc_dhA2-bjJS9agn7BPXfs-5AeaIIIgNXHOhnBq9BhgFPyksfxdXqJ6vvgMUB4EIcOPVs2x3YQ9EXoLAjxqS4O0JoPgS2DpHkpzWqCRcd5-4lvQ7oTxZyK6Dj9qS0IeqQzSE8wYftbpLcY5R2U6seCvyp9MkPRgD-weEJX_RZrllZ2sTqu5TVowfIsqhyCfdOzSnK7J-TuCQvaKpwW2G1Af2eeGEAIhvYy2Cgu-EtX2xolnDvCfZo9fa4W8e14qRhM");'></div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 3</div>
+                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">Ê Đê, Ba Na, Gia Rai</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Hội Cồng Chiêng Tây Nguyên</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Không gian văn hóa Cồng chiêng Tây Nguyên đã được UNESCO công nhận là Di sản văn hóa phi vật thể đại diện của nhân loại. Lễ hội cồng chiêng là dịp để các dân tộc Tây Nguyên tôn vinh nhạc cụ truyền thống và sinh hoạt cộng đồng.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Đắk Lắk, Gia Lai, Kon Tum</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                                        <span>Di sản UNESCO</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
+                                        Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Festival Card 4 - Ok Om Bok -->
+                <div class="festival-card mb-8" data-month="10">
+                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwKujUb9IjQPm-jEIbnJEJ4FJ2ecBBdJs24TWrJSmWXQ7RQw9bN26Ow9oW2Cb78s8VCKG6x5v-lKHczwShQ8z1i5sp8iaVLbNDExF4N5MOIoVtFe0bqIi3BEn9x5b0_RdYx6IQxl42bJnMQu2cdPh-a41IG3oNDFXgF3CtTn9b98kqVy-TEri618FyZajn_Ftki70dRyT3SmaBpDWAaTgNBcv9rsHMQMIwCs6xLEtrlxXFJUP1ve2_gQM3_xNnbC9l1XhOV6N7qjQ");'></div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 10</div>
+                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">Khmer</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Ok Om Bok</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Ok Om Bok (Lễ cúng trăng) là lễ hội truyền thống quan trọng của người Khmer, tổ chức vào rằm tháng 10 âm lịch. Lễ hội thể hiện lòng biết ơn của con người đối với sự ban tặng của trời đất và mong cầu cho một mùa màng bội thu.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Sóc Trăng, Trà Vinh, An Giang</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>2-3 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
+                                        Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Festival Card 5 - Xên Bản Xên Mường -->
+                <div class="festival-card mb-8" data-month="2">
+                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCUhZq2zcW8HXImvbxz42ReXxzaDTYzgrZ6kpBzSMZ9pXgaQtRYIf9Lc9nM5WqNyDC63qfasEezxH7VgDi44-aOXPFZNu3HpwXxkXwyNiXJ3SRXa4GsGm1fJjLStN7A2bO9d-BUl4vPIGj3ZA4XLKD9ExFCiyzBlIqzuK0go28avmp5G20DAf3xG2G9Os3EoQ8b1bVuir3ME4TN5BXZEmhKUw5-1giQwoIVWCjxtlsISJ0vJ8kz7lTD5yFfsURBXU-rj8rIJEEz3g");'></div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 2</div>
+                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">Thái</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Xên Bản Xên Mường</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Xên Bản Xên Mường là lễ hội làm bản làm mường của người Thái, tổ chức vào tháng Giêng âm lịch. Lễ hội thể hiện tinh thần cộng đồng, sum họp và cầu mong bình an, thịnh vượng cho bản làng trong năm mới.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Sơn La, Điện Biên, Nghệ An</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>3-5 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
+                                        Lưu lại
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-gradient-to-br from-primary/5 to-accent-gold/10 py-16 border-t border-[#e7d7cf]">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h3 class="text-3xl font-black text-text-main mb-4">Khám phá thêm về văn hóa dân tộc</h3>
+                <p class="text-text-muted mb-8 max-w-2xl mx-auto">
+                    Tìm hiểu chi tiết về từng dân tộc, trang phục, kiến trúc và di sản văn hóa được bảo tồn
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="Heritage.html" class="px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                        Xem Di sản UNESCO
+                    </a>
+                    <a href="List.html" class="px-8 py-3 border-2 border-gray-200 hover:border-primary hover:text-primary rounded-lg font-bold transition-all">
+                        Danh sách 54 Dân tộc
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1b120d] text-white/80 py-12 md:py-16">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="size-10 text-white flex items-center justify-center rounded-full bg-accent-red">
+                            <span class="material-symbols-outlined text-[24px]">museum</span>
+                        </div>
+                        <span class="text-white font-bold text-xl font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-white/60">
+                        Dự án bảo tàng số nhằm lưu giữ và phát huy giá trị văn hóa của 54 dân tộc Việt Nam.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Khám phá</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="List.html" class="hover:text-primary transition-colors">Danh sách dân tộc</a></li>
+                        <li><a href="Map.html" class="hover:text-primary transition-colors">Bản đồ phân bố</a></li>
+                        <li><a href="Heritage.html" class="hover:text-primary transition-colors">Di sản văn hóa</a></li>
+                        <li><a href="Gallery.html" class="hover:text-primary transition-colors">Gallery hình ảnh</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Thông tin</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="About.html" class="hover:text-primary transition-colors">Về chúng tôi</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Liên hệ</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Theo dõi</h4>
+                    <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
+                    <div class="flex gap-3">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">thumb_up</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">play_circle</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+                <p>© 2024 Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        function filterByMonth(month) {
+            const cards = document.querySelectorAll('.festival-card');
+            const buttons = document.querySelectorAll('.month-btn');
+
+            // Update button states
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-primary', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-text-main');
+            });
+            event.target.classList.add('active', 'bg-primary', 'text-white');
+            event.target.classList.remove('bg-gray-100', 'text-text-main');
+
+            // Filter cards
+            cards.forEach(card => {
+                const cardMonth = card.getAttribute('data-month');
+                if (month === 'all' || cardMonth === month) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize button styles
+        document.addEventListener('DOMContentLoaded', function() {
+            const activeBtn = document.querySelector('.month-btn.active');
+            activeBtn.classList.add('bg-primary', 'text-white');
+            
+            const otherBtns = document.querySelectorAll('.month-btn:not(.active)');
+            otherBtns.forEach(btn => {
+                btn.classList.add('bg-gray-100', 'text-text-main');
+            });
+        });
+    </script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</body>
+</html>

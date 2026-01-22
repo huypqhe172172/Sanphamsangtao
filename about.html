@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Giới Thiệu - Triển Lãm 54 Dân Tộc</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee6c2b",
+                        "accent-red": "#8B0000",
+                        "accent-gold": "#F4E1D2",
+                        "text-main": "#1b120d",
+                        "text-muted": "#9a664c",
+                        "background-light": "#fcf9f8",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-text-main font-display antialiased">
+    
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#e7d7cf]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <a href="Home.html" class="flex items-center gap-3">
+                        <div class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
+                            <span class="material-symbols-outlined text-[32px]">museum</span>
+                        </div>
+                        <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </a>
+                </div>
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="home.html" class="text-sm font-medium transition-colors hover:text-primary">Trang chủ</a>
+                    <a href="list.html" class="text-sm font-medium transition-colors hover:text-primary">Danh sách</a>
+                    <a href="map.html" class="text-sm font-medium transition-colors hover:text-primary">Bản đồ</a>
+                    <a href="gallery.html" class="text-sm font-medium transition-colors hover:text-primary">Gallery</a>
+                    <a href="festival.html" class="text-sm font-medium transition-colors hover:text-primary">Lễ hội</a>
+                    <a href="heritage.html" class="text-sm font-medium transition-colors hover:text-primary">Di sản</a>
+                    <a href="about.html" class="text-primary text-sm font-bold transition-colors">Giới thiệu</a>
+                </nav>
+                <button onclick="toggleDarkMode()" class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">brightness_6</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-24 overflow-hidden bg-gradient-to-br from-primary/10 via-accent-gold/10 to-background-light">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-primary/20 mb-6">
+                        <span class="material-symbols-outlined text-primary">info</span>
+                        <span class="text-sm font-bold text-primary">Về chúng tôi</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-black text-text-main mb-6 leading-tight">
+                        Bảo Tàng Số<br/>
+                        <span class="text-primary">54 Dân Tộc Việt Nam</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-text-muted leading-relaxed">
+                        Dự án bảo tàng số nhằm lưu giữ, bảo tồn và phát huy giá trị văn hóa đặc sắc của 54 dân tộc anh em, góp phần giáo dục thế hệ trẻ về truyền thống dân tộc.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Vision -->
+        <section class="py-16">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Mission -->
+                    <div class="bg-white p-8 rounded-2xl border border-[#e7d7cf] shadow-sm">
+                        <div class="size-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+                            <span class="material-symbols-outlined text-4xl">flag</span>
+                        </div>
+                        <h2 class="text-2xl font-black text-text-main mb-4">Sứ Mệnh</h2>
+                        <p class="text-text-muted leading-relaxed mb-4">
+                            Xây dựng nền tảng tri thức số toàn diện về văn hóa 54 dân tộc Việt Nam, tạo cầu nối giữa thế hệ trẻ và di sản văn hóa dân tộc, góp phần bảo tồn và phát huy bản sắc văn hóa trong kỷ nguyên số.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-sm text-text-muted">Lưu giữ và số hóa di sản văn hóa</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-sm text-text-muted">Giáo dục và nâng cao nhận thức</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-[20px] mt-0.5">check_circle</span>
+                                <span class="text-sm text-text-muted">Kết nối cộng đồng và thế hệ</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Vision -->
+                    <div class="bg-white p-8 rounded-2xl border border-[#e7d7cf] shadow-sm">
+                        <div class="size-16 rounded-2xl bg-accent-red/10 flex items-center justify-center text-accent-red mb-6">
+                            <span class="material-symbols-outlined text-4xl">visibility</span>
+                        </div>
+                        <h2 class="text-2xl font-black text-text-main mb-4">Tầm Nhìn</h2>
+                        <p class="text-text-muted leading-relaxed mb-4">
+                            Trở thành bảo tàng số hàng đầu Việt Nam về văn hóa các dân tộc, là nguồn tài liệu tin cậy cho nghiên cứu, giáo dục và du lịch văn hóa, góp phần quảng bá hình ảnh Việt Nam đa sắc tộc ra thế giới.
+                        </p>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-accent-red text-[20px] mt-0.5">star</span>
+                                <span class="text-sm text-text-muted">Nền tảng tham khảo hàng đầu</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-accent-red text-[20px] mt-0.5">star</span>
+                                <span class="text-sm text-text-muted">Công cụ giáo dục hiện đại</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-accent-red text-[20px] mt-0.5">star</span>
+                                <span class="text-sm text-text-muted">Cửa sổ văn hóa Việt với thế giới</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Values -->
+        <section class="py-16 bg-gradient-to-br from-accent-gold/5 to-background-light">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-text-main mb-4">Giá Trị Cốt Lõi</h2>
+                    <p class="text-text-muted max-w-2xl mx-auto">
+                        Những giá trị định hướng mọi hoạt động của chúng tôi
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center p-6">
+                        <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                            <span class="material-symbols-outlined text-3xl">favorite</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Tôn Trọng</h3>
+                        <p class="text-sm text-text-muted">Tôn trọng đa dạng văn hóa và bản sắc riêng của mỗi dân tộc</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Giáo Dục</h3>
+                        <p class="text-sm text-text-muted">Truyền tải kiến thức chính xác, dễ hiểu và hấp dẫn</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                            <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Sáng Tạo</h3>
+                        <p class="text-sm text-text-muted">Ứng dụng công nghệ hiện đại để bảo tồn di sản</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+                            <span class="material-symbols-outlined text-3xl">groups</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2">Cộng Đồng</h3>
+                        <p class="text-sm text-text-muted">Kết nối và xây dựng cộng đồng yêu văn hóa dân tộc</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="py-16 bg-white">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-text-main mb-4">Thành Tựu Đạt Được</h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-primary mb-2">54</div>
+                        <p class="text-text-muted font-semibold">Dân tộc</p>
+                        <p class="text-sm text-text-muted mt-1">Được tài liệu hóa đầy đủ</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-primary mb-2">500+</div>
+                        <p class="text-text-muted font-semibold">Hình ảnh</p>
+                        <p class="text-sm text-text-muted mt-1">Chất lượng cao</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-primary mb-2">50+</div>
+                        <p class="text-text-muted font-semibold">Lễ hội</p>
+                        <p class="text-sm text-text-muted mt-1">Truyền thống đặc sắc</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-black text-primary mb-2">14</div>
+                        <p class="text-text-muted font-semibold">Di sản UNESCO</p>
+                        <p class="text-sm text-text-muted mt-1">Được giới thiệu</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section (Optional - can be added) -->
+        <section class="py-16 bg-gradient-to-br from-primary/5 to-accent-gold/5">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-black text-text-main mb-4">Đội Ngũ Thực Hiện</h2>
+                    <p class="text-text-muted max-w-2xl mx-auto">
+                        Những người đam mê văn hóa và công nghệ, cùng chung tay xây dựng dự án
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl border border-[#e7d7cf] text-center">
+                        <div class="size-24 rounded-full bg-gradient-to-br from-primary to-accent-red mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                            VH
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">Nhóm Văn Hóa</h3>
+                        <p class="text-sm text-text-muted mb-3">Nghiên cứu & Biên soạn nội dung</p>
+                        <p class="text-xs text-text-muted leading-relaxed">
+                            Chuyên gia văn hóa, nhà dân tộc học và biên tập viên chuyên nghiệp
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-[#e7d7cf] text-center">
+                        <div class="size-24 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                            TK
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">Nhóm Thiết Kế</h3>
+                        <p class="text-sm text-text-muted mb-3">UI/UX & Visual Design</p>
+                        <p class="text-xs text-text-muted leading-relaxed">
+                            Designer và illustrator tạo trải nghiệm thị giác đẹp mắt
+                        </p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-[#e7d7cf] text-center">
+                        <div class="size-24 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 mx-auto mb-4 flex items-center justify-center text-white text-2xl font-bold">
+                            CN
+                        </div>
+                        <h3 class="font-bold text-lg mb-1">Nhóm Công Nghệ</h3>
+                        <p class="text-sm text-text-muted mb-3">Development & Maintenance</p>
+                        <p class="text-xs text-text-muted leading-relaxed">
+                            Developer xây dựng và duy trì nền tảng website
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="py-16 bg-white">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-gradient-to-br from-primary to-accent-red rounded-3xl p-12 text-center text-white">
+                    <h2 class="text-3xl md:text-4xl font-black mb-4">Hợp Tác Cùng Chúng Tôi</h2>
+                    <p class="text-white/90 max-w-2xl mx-auto mb-8 leading-relaxed">
+                        Bạn là nhà nghiên cứu, nhiếp ảnh gia, hoặc đơn giản là người yêu văn hóa dân tộc? Hãy cùng chúng tôi xây dựng và hoàn thiện dự án này.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="px-8 py-3 bg-white text-primary rounded-lg font-bold hover:bg-accent-gold transition-all">
+                            Liên hệ hợp tác
+                        </button>
+                        <button class="px-8 py-3 bg-white/10 backdrop-blur border-2 border-white/40 text-white rounded-lg font-bold hover:bg-white/20 transition-all">
+                            Đóng góp nội dung
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners (Optional) -->
+        <section class="py-12 border-t border-[#e7d7cf]">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-sm text-text-muted mb-8 font-semibold">ĐỐI TÁC & HỖ TRỢ</p>
+                <div class="flex flex-wrap justify-center items-center gap-12 opacity-40">
+                    <div class="text-2xl font-bold text-text-main">UNESCO</div>
+                    <div class="text-2xl font-bold text-text-main">Bộ VHTTDL</div>
+                    <div class="text-2xl font-bold text-text-main">Bảo Tàng Dân Tộc Học VN</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1b120d] text-white/80 py-12 md:py-16">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="size-10 text-white flex items-center justify-center rounded-full bg-accent-red">
+                            <span class="material-symbols-outlined text-[24px]">museum</span>
+                        </div>
+                        <span class="text-white font-bold text-xl font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-white/60">
+                        Dự án bảo tàng số nhằm lưu giữ và phát huy giá trị văn hóa của 54 dân tộc Việt Nam.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Khám phá</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="List.html" class="hover:text-primary transition-colors">Danh sách dân tộc</a></li>
+                        <li><a href="Map.html" class="hover:text-primary transition-colors">Bản đồ phân bố</a></li>
+                        <li><a href="Heritage.html" class="hover:text-primary transition-colors">Di sản văn hóa</a></li>
+                        <li><a href="Gallery.html" class="hover:text-primary transition-colors">Gallery hình ảnh</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Thông tin</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="About.html" class="hover:text-primary transition-colors">Về chúng tôi</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Liên hệ</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Chính sách bảo mật</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Theo dõi</h4>
+                    <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
+                    <div class="flex gap-3">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">thumb_up</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">play_circle</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                            <span class="material-symbols-outlined text-xl">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+                <p>© 2024 Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>

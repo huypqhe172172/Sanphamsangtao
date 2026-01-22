@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html class="light" lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Danh Sách 54 Dân Tộc Việt Nam</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ee6c2b",
+                        "accent-red": "#8B0000",
+                        "accent-gold": "#F4E1D2",
+                        "text-main": "#1b120d",
+                        "text-muted": "#9a664c",
+                        "background-light": "#fcf9f8",
+                        "background-dark": "#221610",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"],
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-text-main font-display antialiased min-h-screen flex flex-col">
+    <!-- Unified Header -->
+    <header class="sticky top-0 z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#e7d7cf]">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
+                        <span class="material-symbols-outlined text-[32px]">museum</span>
+                    </div>
+                    <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển Lãm
+                        54 Dân Tộc</span>
+                </div>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="home.html">Trang chủ</a>
+                    <a class="text-primary text-sm font-bold transition-colors" href="#list">Danh sách</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="map.html">Bản đồ</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="gallery.html">Hình ảnh</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="festival.html">Lễ Hội</a>   
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="heritage.html">Di sản</a>
+                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                        href="about.html">Giới thiệu</a>
+                </nav>
+                <div class="flex items-center gap-4">
+                    <button onclick="toggleDarkMode()"
+                        class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
+                        <span class="material-symbols-outlined text-[20px]">brightness_6</span>
+                    </button>
+                    <button class="md:hidden p-2">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <!-- Breadcrumbs -->
+        <nav class="flex flex-wrap gap-2 mb-6 text-sm">
+            <a class="text-text-muted hover:text-primary transition-colors" href="home.html">Trang chủ</a>
+            <span class="text-text-muted">/</span>
+            <span class="text-text-main font-semibold">Danh sách dân tộc</span>
+        </nav>
+
+        <!-- Page Heading -->
+        <div class="flex flex-col gap-6 mb-10 max-w-4xl mx-auto text-center md:text-left md:mx-0">
+            <div>
+                <h2 class="text-text-main text-4xl sm:text-5xl font-black leading-[1.1] tracking-tight mb-3">
+                    Khám phá 54 dân tộc anh em
+                </h2>
+                <p class="text-text-muted text-lg sm:text-xl font-medium leading-relaxed max-w-2xl">
+                    Hành trình tìm hiểu văn hóa, trang phục và phong tục tập quán đặc sắc của cộng đồng các dân tộc Việt
+                    Nam.
+                </p>
+            </div>
+        </div>
+
+        
+
+        <!-- Gallery Grid -->
+        <div id="ethnicGrid" class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+            <!-- Kinh -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://files.bdttg.gov.vn/files/ubdt/source_files/2015/11/04/15395757_ng%C6%B0%E1%BB%9Di%20vi%E1%BB%87t_15-11-04.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Kinh</h4>
+            </a>
+
+            <!-- Tày -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://i.pinimg.com/736x/07/5e/2a/075e2ac4bd70cdb3e50767e4d374b0c3.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Tày</h4>
+            </a>
+
+            <!-- Thái -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://routine-db.s3.amazonaws.com/prod/media/trang-phuc-dan-toc-thai-trang-voi-ao-co-v-dac-trung-jpg-b8bc.webp");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Thái</h4>
+            </a>
+
+            <!-- Mường -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrz9tCSyVBSyxC1MpwslJys3OjI3-ZJy3RFw&s");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Mường</h4>
+            </a>
+
+            <!-- Khmer -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://file.hstatic.net/200000503583/file/trang-phuc-dan-toc-khmer-1_7044cb7d7f844b339d5f8e1069a59ab0.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Khmer</h4>
+            </a>
+
+            <!-- Hoa -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://iced.edu.vn/wp-content/uploads/2024/11/dan-toc-hoa-1.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Hoa</h4>
+            </a>
+
+            <!-- Nùng -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://t.cmx-cdn.com/treemvietnam.net.vn/files/phuongnhung26/2022/11/22/00000tre-em-dan-toc-nung--anh-ha-duong-075215.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Nùng</h4>
+            </a>
+
+            <!-- H'Mông -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://i.pinimg.com/1200x/87/22/ed/8722ed361da83dc8e18e238b561390dc.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">H’Mông</h4>
+            </a>
+
+            <!-- Dao -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://laichau.gov.vn/upload/2000066/fck/files/u(3).jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Dao</h4>
+            </a>
+
+            <!-- Gia Rai -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cly.1cdn.vn/2021/12/29/dantoctongiao.congly.vn-upload-content_img-2021-1229-_nghi-le-trao-vong-tay-trong-dam-cuoi-cua-nguoi-jrai_anh_bai_nhung_net_van_hoa_dac_sac_cua_dan_toc_jrai_3.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Gia Rai</h4>
+            </a>
+
+            <!-- Ê Đê -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://i.pinimg.com/736x/c8/12/6d/c8126d8d3568dc18d02351ffea8be76b.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Ê Đê</h4>
+            </a>
+
+            <!-- Ba Na -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://imagevietnam.vnanet.vn/Upload/2015/3/3/TT2.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Ba Na</h4>
+            </a>
+
+            <!-- Xơ Đăng -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef3db45666ade1b00696e46e3ebcd8fe94fe39fb647efbfc32dbc5855bd531efa55cfacd5ee898d181029010948d9846a0/xo-dang4-185.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Xơ Đăng</h4>
+            </a>
+
+            <!-- Sán Chay -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://image.vovworld.vn/w500/uploaded/vovworld/thpsplu/2024_11_12/tax33_pwvr.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Sán Chay</h4>
+            </a>
+
+            <!-- Chăm -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3efbb4be614861eca710cf0d58f45695765fdf15a65eac1b0f2678c77de6191c923978e63db9dc340c8513c9c24a9d06a6d/dat-4623-4884.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Chăm</h4>
+            </a>
+
+            <!-- Sán Dìu -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://dantocmiennui-media.baotintuc.vn/images/57c5aab70c5efc5a98d240302ffc6edb3181d04b0297f588d3f38c4c6f5a159b8414efadfca629b604e06f204f5e88a4b454053737f7154c46b6e3b0f515128b/sandiu2-1.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Sán Dìu</h4>
+            </a>
+
+            <!-- Hrê -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://files.bdttg.gov.vn/contentfolder/ubdt/source_files/2015/11/04/10261682_ng%C6%B0%E1%BB%9Di%20hre_15-11-04.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Hrê</h4>
+            </a>
+
+            <!-- Cơ Ho -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef3db45666ade1b00696e46e3ebcd8fe943b21502bfd7e0a1494a3826a7fab706063a899dc0d598a8828a44264337440e8/co-ho-8591.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Cơ Ho</h4>
+            </a>
+
+            <!-- Raglai -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://dantocmiennui-media.baotintuc.vn/images/84426cb421b40f0fbef0009243df48a9bb72d09ee861fd737fc91f09341b6f916206a033b58f46d62b9c5224250089e84f707dafa95bc351aa0d3edb4f3b7607/raglai2-1405.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Raglai</h4>
+            </a>
+
+            <!-- Chu Ru -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://images.baodantoc.vn/uploads/2021/Th%C3%A1ng%208/Ng%C3%A0y_13/%C3%81nh/churu_mc3baa-truye1bb81n-the1bb91ng.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Chu Ru</h4>
+            </a>
+
+            <!-- Bru – Vân Kiều -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://images.baodantoc.vn/uploads/2022/Th%C3%A1ng%206/Ng%C3%A0y_30/To%20Oanh/Dan%20toc%20Bru%20Van%20Kieu/DSC_0256.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Bru – Vân Kiều</h4>
+            </a>
+
+            <!-- Thổ -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef7360b89b00bf2c33c2dc0c5a36c5ab8e9fd575decc751cdbffe8d5d5b2e6bb487d071577ce164f655b624116f2a30782b20297f5a1cdf32a3a8d119a2198c09a82efdd08e5c71261960fc65a666f59b7/z3855491850033-e5d9659f1a57339603cd25b1a608a402-9086.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Thổ</h4>
+            </a>
+
+            <!-- Khơ Mú -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://files.bdttg.gov.vn/contentfolder/ubdt/source_files/2015/11/04/16132586_kh%C6%A1%20m%C3%BA_15-11-04.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Khơ Mú</h4>
+            </a>
+
+            <!-- Xtiêng -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://langvanhoavietnam.vn/Files/village/dd(9).jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Xtiêng</h4>
+            </a>
+
+            <!-- Lào -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/471a3c6c198b68cb0c2001103d81c9b5f4a1f57e848fcfdca6d8d83162f9dc90640a7005aae247a011eb4fc0abccf724b7ae13cda333b1a658a4aa09dbd85477/laodat2.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Lào</h4>
+            </a>
+
+            <!-- La Chí -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://i.ytimg.com/vi/j2_PVN5QYe8/maxresdefault.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">La Chí</h4>
+            </a>
+
+            <!-- La Ha -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://dantocmiennui-media.baotintuc.vn/images/5c0c54f95c9777a45a8f5910a7a986a56447f501eaac0597f6769a75d9b7f591940e71c7e062b793528c6587ca669d10124b728815dfd091e0f62bbd7d8fe3b4/laha-933.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">La Ha</h4>
+            </a>
+
+            <!-- Phù Lá -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef93d4091ddd874bc6072c0621b9c3c8a2cb770a77db69cdd6f9fded79a834ba8a8c305a1de2eb964180f2b4573ed4e831/phula-dat-893.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Phù Lá</h4>
+            </a>
+
+            <!-- La Hủ -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3eff4a1f57e848fcfdca6d8d83162f9dc907803838c674daa768e50b5f0289b2f5063a899dc0d598a8828a44264337440e8/lahu-dat.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">La Hủ</h4>
+            </a>
+
+            <!-- Lô Lô -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3efd9e6b3c6f48f6ffcf9e7d3e9837338b45f83b226c28cb6bc617634c136c8b67fe667d376bf869970b83bd2a9ea12e0ea/9-4064.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Lô Lô</h4>
+            </a>
+
+            <!-- Chứt -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef7360b89b00bf2c33c2dc0c5a36c5ab8ee9d932b6ea437a33e0c90ef4c6dc575564a25046fd43bca4750b56cbed913a66/chut14-2-1169.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Chứt</h4>
+            </a>
+
+            <!-- Mảng -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://laichau.gov.vn/upload/2000066/fck/files/IMG_20201116_160344.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Mảng</h4>
+            </a>
+
+            <!-- Pà Thẻn -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0UdLERZsJ_AFn3gcMJEAKAaL037O4SLlEWA&s");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Pà Thẻn</h4>
+            </a>
+
+            <!-- Cờ Lao -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://ati.net.vn/wp-content/uploads/2023/05/dan-toc-co-lao-1-1.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Cờ Lao</h4>
+            </a>
+
+            <!-- Bố Y -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef6da51f0c0ad991901283c66f347bc9e44f4de6689a2d33f72079a70ab68961333f54cf39e9adf88c99d502796f2fa4d2/dat-5870-2093.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Bố Y</h4>
+            </a>
+
+            <!-- Ngái -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3efbb4be614861eca710cf0d58f45695765206d428e6a18e8c994a3159c442b9c24236b71749e834bd6225855557df84a69/ngai-4713.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Ngái</h4>
+            </a>
+
+            <!-- Si La -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrYAlnyIbOo-QUtrRUGmMTzaKHerlnGI9_ag&s");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Si La</h4>
+            </a>
+
+            <!-- Pu Péo -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1xawnIn7NgHcLLRfAAAyhFPCgH66m9Qn_wg&s");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Pu Péo</h4>
+            </a>
+
+            <!-- Rơ Măm -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://files.bdttg.gov.vn/files/ubdt/source_files/2015/11/04/15355089_ng%C6%B0%E1%BB%9Di%20r%C6%A1%20m%C4%83m_15-11-04.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Rơ Măm</h4>
+            </a>
+
+            <!-- Brâu -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://images.baodantoc.vn/uploads/2022/Th%C3%A1ng%206/Ng%C3%A0y_30/To%20Oanh/Dan%20toc%20Brau/chuyen-tinh-brau-4_uakj.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Brâu</h4>
+            </a>
+
+            <!-- Ơ Đu -->
+            <a href="#detail" class="group">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden mb-3">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                        style='background-image:url("https://cdn.nhandan.vn/images/1ef398c4e2fb4bf07980a2ded785b3ef0733e83e918151b39513c127de5899232cf9b854c6e63bc5d25ffa87bed07821/6.jpg");'>
+                    </div>
+                </div>
+                <h4 class="font-bold group-hover:text-primary transition-colors">Ơ Đu</h4>
+            </a>
+
+
+        </div>
+
+        <!-- No Results Message -->
+        <div id="noResults" class="hidden text-center py-20">
+            <div class="size-20 mx-auto mb-4 rounded-full bg-gray-100 flex items-center justify-center">
+                <span class="material-symbols-outlined text-4xl text-gray-400">search_off</span>
+            </div>
+            <h3 class="text-xl font-bold text-text-main mb-2">Không tìm thấy dân tộc</h3>
+            <p class="text-text-muted">Vui lòng thử từ khóa khác</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1b120d] text-white/80 py-12 md:py-16 mt-auto">
+        <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="size-10 text-white flex items-center justify-center rounded-full bg-accent-red">
+                            <span class="material-symbols-outlined text-[24px]">museum</span>
+                        </div>
+                        <span class="text-white font-bold text-xl font-serif">Triển Lãm 54 Dân Tộc</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-white/60">
+                        Dự án bảo tàng số nhằm lưu giữ và phát huy giá trị văn hóa của 54 dân tộc Việt Nam.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Khám phá</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="list.html">Danh sách dân tộc</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="map.html">Bản đồ phân bố</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="heritage.html">Di sản văn hóa</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="festival.html">Lễ hội truyền thống</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Thông tin</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="about.html">Về chúng tôi</a></li>
+                        <li><a class="hover:text-primary transition-colors" >Liên hệ : 0868172958</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-4">Theo dõi</h4>
+                    <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
+                    <div class="flex gap-3">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">thumb_up</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">play_circle</span>
+                        </a>
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">photo_camera</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
+                <p>Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html
