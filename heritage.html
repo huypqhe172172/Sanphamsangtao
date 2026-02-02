@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html class="light" lang="vi">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Di Sản UNESCO - Triển Lãm 54 Dân Tộc</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -31,30 +35,34 @@
         }
     </script>
 </head>
+
 <body class="bg-background-light text-text-main font-display antialiased">
-    
+
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#e7d7cf]">
         <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3">
-                    <a href="Home.html" class="flex items-center gap-3">
-                        <div class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
+                    <a href="index.html" class="flex items-center gap-3">
+                        <div
+                            class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
                             <span class="material-symbols-outlined text-[32px]">museum</span>
                         </div>
-                        <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển Lãm 54 Dân Tộc</span>
+                        <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển
+                            Lãm 54 Dân Tộc</span>
                     </a>
                 </div>
                 <nav class="hidden lg:flex items-center gap-6">
-                    <a href="home.html" class="text-sm font-medium transition-colors hover:text-primary">Trang chủ</a>
+                    <a href="index.html" class="text-sm font-medium transition-colors hover:text-primary">Trang chủ</a>
                     <a href="list.html" class="text-sm font-medium transition-colors hover:text-primary">Danh sách</a>
                     <a href="map.html" class="text-sm font-medium transition-colors hover:text-primary">Bản đồ</a>
-                    <a href="gallery.html" class="text-sm font-medium transition-colors hover:text-primary">Gallery</a>
+                    <a href="gallery.html" class="text-sm font-medium transition-colors hover:text-primary">Hình ảnh</a>
                     <a href="festival.html" class="text-sm font-medium transition-colors hover:text-primary">Lễ hội</a>
                     <a href="heritage.html" class="text-primary text-sm font-bold transition-colors">Di sản</a>
                     <a href="about.html" class="text-sm font-medium transition-colors hover:text-primary">Giới thiệu</a>
                 </nav>
-                <button onclick="toggleDarkMode()" class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
+                <button onclick="toggleDarkMode()"
+                    class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
                     <span class="material-symbols-outlined text-[20px]">brightness_6</span>
                 </button>
             </div>
@@ -69,16 +77,19 @@
                 <div class="max-w-3xl">
                     <div class="flex items-center gap-2 mb-4">
                         <span class="material-symbols-outlined text-accent-red text-3xl">verified</span>
-                        <span class="text-sm font-bold text-accent-red uppercase tracking-wider">UNESCO World Heritage</span>
+                        <span class="text-sm font-bold text-accent-red uppercase tracking-wider">UNESCO World
+                            Heritage</span>
                     </div>
                     <h1 class="text-4xl md:text-6xl font-black text-text-main mb-6 leading-tight">
-                        Di Sản Văn Hóa<br/>
+                        Di Sản Văn Hóa<br />
                         <span class="text-accent-red">Phi Vật Thể</span>
                     </h1>
                     <p class="text-lg text-text-muted leading-relaxed mb-8">
-                        Việt Nam tự hào với 14 di sản văn hóa phi vật thể được UNESCO công nhận, trong đó nhiều di sản gắn liền với đời sống văn hóa của các dân tộc thiểu số.
+                        Việt Nam tự hào với 14 di sản văn hóa phi vật thể được UNESCO công nhận, trong đó nhiều di sản
+                        gắn liền với đời sống văn hóa của các dân tộc thiểu số.
                     </p>
-                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border-2 border-accent-red/20">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border-2 border-accent-red/20">
                         <span class="text-accent-red font-black text-2xl">14</span>
                         <span class="text-text-muted">Di sản UNESCO</span>
                     </div>
@@ -89,36 +100,49 @@
         <!-- Heritage Grid -->
         <section class="py-12">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <!-- Heritage 1 - Cồng Chiêng -->
-                <div class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
                     <div class="grid lg:grid-cols-2 gap-0">
                         <div class="relative aspect-[4/3] lg:aspect-auto">
-                            <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA86HkKP-1peDc_dhA2-bjJS9agn7BPXfs-5AeaIIIgNXHOhnBq9BhgFPyksfxdXqJ6vvgMUB4EIcOPVs2x3YQ9EXoLAjxqS4O0JoPgS2DpHkpzWqCRcd5-4lvQ7oTxZyK6Dj9qS0IeqQzSE8wYftbpLcY5R2U6seCvyp9MkPRgD-weEJX_RZrllZ2sTqu5TVowfIsqhyCfdOzSnK7J-TuCQvaKpwW2G1Af2eeGEAIhvYy2Cgu-EtX2xolnDvCfZo9fa4W8e14qRhM");'></div>
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://i.pinimg.com/1200x/1d/06/03/1d0603b5e9f0b59ab2163d42c18eb759.jpg");'>
+                            </div>
                             <div class="absolute top-4 left-4">
-                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
                                     <span class="material-symbols-outlined text-[16px]">verified</span>
                                     UNESCO 2005
                                 </div>
                             </div>
                         </div>
                         <div class="p-8 lg:p-12">
-                            <h2 class="text-3xl font-black text-text-main mb-4">Không gian Văn hóa Cồng Chiêng Tây Nguyên</h2>
+                            <h2 class="text-3xl font-black text-text-main mb-4">Không gian Văn hóa Cồng Chiêng Tây
+                                Nguyên</h2>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Ê Đê</span>
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Ba Na</span>
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Gia Rai</span>
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Cơ Ho</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Ê
+                                    Đê</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Ba
+                                    Na</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Gia
+                                    Rai</span>
+                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Cơ
+                                    Ho</span>
                             </div>
                             <p class="text-text-muted leading-relaxed mb-6">
-                                Cồng chiêng là nhạc cụ truyền thống gắn liền với đời sống tinh thần của các dân tộc Tây Nguyên. Tiếng cồng chiêng vang lên trong các lễ hội, tang lễ, mừng mùa màng và là phương tiện giao tiếp với thần linh.
+                                Cồng chiêng là nhạc cụ truyền thống gắn liền với đời sống tinh thần của các dân tộc Tây
+                                Nguyên. Tiếng cồng chiêng vang lên trong các lễ hội, tang lễ, mừng mùa màng và là phương
+                                tiện giao tiếp với thần linh.
                             </p>
                             <div class="space-y-3 mb-6">
                                 <div class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary">location_on</span>
                                     <div>
                                         <p class="font-semibold text-sm mb-1">Vùng Tây Nguyên</p>
-                                        <p class="text-sm text-text-muted">Đắk Lắk, Gia Lai, Kon Tum, Lâm Đồng, Đắk Nông</p>
+                                        <p class="text-sm text-text-muted">Đắk Lắk, Gia Lai, Kon Tum, Lâm Đồng, Đắk Nông
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-3">
@@ -129,7 +153,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                            <button onclick="window.open('https://vi.wikipedia.org/wiki/Kh%C3%B4ng_gian_v%C4%83n_h%C3%B3a_c%E1%BB%93ng_chi%C3%AAng_T%C3%A2y_Nguy%C3%AAn', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
                                 Tìm hiểu thêm
                             </button>
                         </div>
@@ -137,12 +162,16 @@
                 </div>
 
                 <!-- Heritage 2 - Hát Then -->
-                <div class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
                     <div class="grid lg:grid-cols-2 gap-0">
                         <div class="relative aspect-[4/3] lg:aspect-auto">
-                            <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-m-avx8RntOG04mpjf1ptMxpP6xHz-kGSuPbfzB6lkpw3ylVIlbwH8E4TUvDvaHjXNJF-grBgv86bn20FTFuEerhLDF3Rjxi8wMK9txEKvcuUWwcIWK8sw-A-X6_ce5vpmVC--une5WKSD6-PDF2e_Br2Dyu8KxOpsDlL-EHzM9wWZ31pVPy9I79KTqdGPj4VE5EDEdKfiT3-ECinBugvkB1LbZG1WKuPobAnzdbTLMFMEu9dJgOvFFWZ9_bzRF8YBCaPlFTxzUg");'></div>
-                            <div class="absolute top-4 left-4">
-                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://i.pinimg.com/1200x/4e/30/37/4e3037458b83a5642604fc7d654041a3.jpg");'>
+                            </div>
+                           <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
                                     <span class="material-symbols-outlined text-[16px]">verified</span>
                                     UNESCO 2019
                                 </div>
@@ -151,12 +180,17 @@
                         <div class="p-8 lg:p-12">
                             <h2 class="text-3xl font-black text-text-main mb-4">Nghệ thuật Hát Then, Đàn Tính</h2>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Tày</span>
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Nùng</span>
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Thái</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Tày</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Nùng</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Thái</span>
                             </div>
                             <p class="text-text-muted leading-relaxed mb-6">
-                                Hát Then là hình thức sinh hoạt văn hóa tâm linh đặc sắc của các dân tộc Tày, Nùng, Thái. Nghệ thuật này kết hợp giữa ca hát, múa và đàn Tính (nhạc cụ dân tộc), thường được biểu diễn trong các nghi lễ cúng bái, cầu an.
+                                Hát Then là hình thức sinh hoạt văn hóa tâm linh đặc sắc của các dân tộc Tày, Nùng,
+                                Thái. Nghệ thuật này kết hợp giữa ca hát, múa và đàn Tính (nhạc cụ dân tộc), thường được
+                                biểu diễn trong các nghi lễ cúng bái, cầu an.
                             </p>
                             <div class="space-y-3 mb-6">
                                 <div class="flex items-start gap-3">
@@ -170,11 +204,13 @@
                                     <span class="material-symbols-outlined text-primary">music_note</span>
                                     <div>
                                         <p class="font-semibold text-sm mb-1">Đặc điểm</p>
-                                        <p class="text-sm text-text-muted">Kết hợp giữa tín ngưỡng Then và nghệ thuật biểu diễn</p>
+                                        <p class="text-sm text-text-muted">Kết hợp giữa tín ngưỡng Then và nghệ thuật
+                                            biểu diễn</p>
                                     </div>
                                 </div>
                             </div>
-                            <button class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                            <button onclick="window.open('https://vhttdl.daklak.gov.vn/Articles/Detail/9183', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
                                 Tìm hiểu thêm
                             </button>
                         </div>
@@ -182,12 +218,16 @@
                 </div>
 
                 <!-- Heritage 3 - Hát Xoan -->
-                <div class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
                     <div class="grid lg:grid-cols-2 gap-0">
                         <div class="relative aspect-[4/3] lg:aspect-auto">
-                            <div class="absolute inset-0 bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC2pJpvRy0Ai97L1hFGK40AxGhcQCRhkBTbH6UxJq_L-kYHVERmezyz9-te8e0F5AUzntgvIjiU5zNhQFZyWgOr-BoWJfvTGlcLDfVD1LN0f7GKK809iWXFum1N_nK4_yyFIZtHMiNQFjNsAAmL3nEprk-GT_7nM15b57FhYbebQlqwlB1Ws2raenIjESe83PF1jm8zpaOg-jqBonUTSwHN8bWIK2D9qP0kTEEY5xf-A3-6oXMeAIYjyWYpQFaX73N4fSkcKN-V4WQ");'></div>
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://file3.qdnd.vn/data/images/0/2019/12/04/tuanson/4.jpg");'>
+                            </div>
                             <div class="absolute top-4 left-4">
-                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
                                     <span class="material-symbols-outlined text-[16px]">verified</span>
                                     UNESCO 2011
                                 </div>
@@ -196,10 +236,14 @@
                         <div class="p-8 lg:p-12">
                             <h2 class="text-3xl font-black text-text-main mb-4">Hát Xoan Phú Thọ</h2>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Kinh (Việt)</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Kinh
+                                    (Việt)</span>
                             </div>
                             <p class="text-text-muted leading-relaxed mb-6">
-                                Hát Xoan là loại hình nghệ thuật dân gian truyền thống của vùng đất Tổ Phú Thọ, có lịch sử hàng nghìn năm. Được hát trong các lễ hội mùa xuân, hát Xoan thể hiện niềm tin về sự sinh sôi, phồn thịnh và ước vọng về một năm mới tươi đẹp.
+                                Hát Xoan là loại hình nghệ thuật dân gian truyền thống của vùng đất Tổ Phú Thọ, có lịch
+                                sử hàng nghìn năm. Được hát trong các lễ hội mùa xuân, hát Xoan thể hiện niềm tin về sự
+                                sinh sôi, phồn thịnh và ước vọng về một năm mới tươi đẹp.
                             </p>
                             <div class="space-y-3 mb-6">
                                 <div class="flex items-start gap-3">
@@ -213,11 +257,13 @@
                                     <span class="material-symbols-outlined text-primary">calendar_today</span>
                                     <div>
                                         <p class="font-semibold text-sm mb-1">Thời gian biểu diễn</p>
-                                        <p class="text-sm text-text-muted">Chủ yếu trong mùa Xuân, đặc biệt dịp Giỗ Tổ Hùng Vương</p>
+                                        <p class="text-sm text-text-muted">Chủ yếu trong mùa Xuân, đặc biệt dịp Giỗ Tổ
+                                            Hùng Vương</p>
                                     </div>
                                 </div>
                             </div>
-                            <button class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                            <button onclick="window.open('https://baochinhphu.vn/hat-xoan-phu-tho-la-di-san-van-hoa-phi-vat-the-dai-dien-cua-nhan-loai-102231465.htm', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
                                 Tìm hiểu thêm
                             </button>
                         </div>
@@ -225,14 +271,16 @@
                 </div>
 
                 <!-- Heritage 4 - Ca trù -->
-                <div class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
                     <div class="grid lg:grid-cols-2 gap-0">
                         <div class="relative aspect-[4/3] lg:aspect-auto">
-                            <div class="absolute inset-0 bg-gradient-to-br from-gray-300 to-gray-100 flex items-center justify-center">
-                                <span class="material-symbols-outlined text-8xl text-gray-400">music_note</span>
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://ticketgo.vn/photos/2378/6308e18b1cd06.jpg");'>
                             </div>
                             <div class="absolute top-4 left-4">
-                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
                                     <span class="material-symbols-outlined text-[16px]">verified</span>
                                     UNESCO 2009
                                 </div>
@@ -241,17 +289,22 @@
                         <div class="p-8 lg:p-12">
                             <h2 class="text-3xl font-black text-text-main mb-4">Ca Trù</h2>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Kinh (Việt)</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Kinh
+                                    (Việt)</span>
                             </div>
                             <p class="text-text-muted leading-relaxed mb-6">
-                                Ca trù, còn gọi là Hát ả đào hay Hát nói, là loại hình nghệ thuật biểu diễn ca hát cổ truyền của Việt Nam. Nghệ thuật này kết hợp giữa thơ ca, âm nhạc và múa, thường được biểu diễn trong các không gian văn hóa truyền thống.
+                                Ca trù, còn gọi là Hát ả đào hay Hát nói, là loại hình nghệ thuật biểu diễn ca hát cổ
+                                truyền của Việt Nam. Nghệ thuật này kết hợp giữa thơ ca, âm nhạc và múa, thường được
+                                biểu diễn trong các không gian văn hóa truyền thống.
                             </p>
                             <div class="space-y-3 mb-6">
                                 <div class="flex items-start gap-3">
                                     <span class="material-symbols-outlined text-primary">history_edu</span>
                                     <div>
                                         <p class="font-semibold text-sm mb-1">Lịch sử</p>
-                                        <p class="text-sm text-text-muted">Xuất hiện từ thế kỷ 15, thịnh hành trong thời phong kiến</p>
+                                        <p class="text-sm text-text-muted">Xuất hiện từ thế kỷ 15, thịnh hành trong thời
+                                            phong kiến</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start gap-3">
@@ -262,7 +315,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                            <button onclick="window.open('https://vi.wikipedia.org/wiki/Ca_tr%C3%B9', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
                                 Tìm hiểu thêm
                             </button>
                         </div>
@@ -270,14 +324,16 @@
                 </div>
 
                 <!-- Heritage 5 - Đờn ca tài tử -->
-                <div class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
                     <div class="grid lg:grid-cols-2 gap-0">
                         <div class="relative aspect-[4/3] lg:aspect-auto">
-                            <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-blue-50 flex items-center justify-center">
-                                <span class="material-symbols-outlined text-8xl text-green-400">piano</span>
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://tourbonphuong.com/upload/images/don-ca-tai-tu-net-dac-trung-cua-van-hoa-nam-bo.JPG");'>
                             </div>
                             <div class="absolute top-4 left-4">
-                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
                                     <span class="material-symbols-outlined text-[16px]">verified</span>
                                     UNESCO 2013
                                 </div>
@@ -286,12 +342,18 @@
                         <div class="p-8 lg:p-12">
                             <h2 class="text-3xl font-black text-text-main mb-4">Nghệ thuật Đờn ca tài tử Nam Bộ</h2>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Kinh (Việt)</span>
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Hoa</span>
-                                <span class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Khmer</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Kinh
+                                    (Việt)</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Hoa</span>
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Khmer</span>
                             </div>
                             <p class="text-text-muted leading-relaxed mb-6">
-                                Đờn ca tài tử là loại hình nghệ thuật âm nhạc dân gian đặc trưng của vùng Nam Bộ, ra đời vào cuối thế kỷ 19. Nghệ thuật này kết hợp nhiều nhạc cụ truyền thống và giọng ca ngọt ngào, thể hiện tâm hồn con người miền Nam.
+                                Đờn ca tài tử là loại hình nghệ thuật âm nhạc dân gian đặc trưng của vùng Nam Bộ, ra đời
+                                vào cuối thế kỷ 19. Nghệ thuật này kết hợp nhiều nhạc cụ truyền thống và giọng ca ngọt
+                                ngào, thể hiện tâm hồn con người miền Nam.
                             </p>
                             <div class="space-y-3 mb-6">
                                 <div class="flex items-start gap-3">
@@ -305,11 +367,473 @@
                                     <span class="material-symbols-outlined text-primary">music_note</span>
                                     <div>
                                         <p class="font-semibold text-sm mb-1">Nhạc cụ</p>
-                                        <p class="text-sm text-text-muted">Đàn tranh, đàn cò, đàn kìm, song loan, bầu</p>
+                                        <p class="text-sm text-text-muted">Đàn tranh, đàn cò, đàn kìm, song loan, bầu
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            <button class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                            <button onclick="window.open('https://vi.wikipedia.org/wiki/%C4%90%E1%BB%9Dn_ca_t%C3%A0i_t%E1%BB%AD_Nam_B%E1%BB%99', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://imgnvsk.vnanet.vn/MediaUpload/Content/2023/08/02/2023-02-22-vn-quan-ho-bn-ruby2-17-3-44-837-471-2-17-4-22.jpg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2009
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Dân ca Quan họ Bắc Ninh</h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Kinh
+                                    (Việt)</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Quan họ là hình thức hát giao duyên giữa các liền anh, liền chị. Đây là nét văn hóa đặc
+                                trưng của vùng Kinh Bắc với lối hát đối đáp tinh tế, phong cách lịch lãm và những quy
+                                định khắt khe về lề lối, trang phục.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">location_on</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Vùng Kinh Bắc</p>
+                                        <p class="text-sm text-text-muted">Bắc Ninh và Bắc Giang</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">record_voice_over</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Đặc điểm</p>
+                                        <p class="text-sm text-text-muted">Hát đối đáp, không cần nhạc đệm, thể hiện
+                                            tình gắn kết</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://vi.wikipedia.org/wiki/Quan_h%E1%BB%8D', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://phunuvietnam.mediacdn.vn/179072216278405120/2025/5/4/hoi-giong-phu-dong-202511-17463630047581312760251.jpg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2010
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12 lg:order-1">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Hội Gióng tại đền Phù Đổng và đền Sóc
+                            </h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Tín
+                                    ngưỡng thờ anh hùng</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Một "bảo tàng văn hóa ngoài trời", mô phỏng sinh động các trận đánh của Thánh Gióng
+                                chống giặc ngoại xâm. Lễ hội thể hiện tinh thần yêu nước và lòng tự hào dân tộc của
+                                người Việt.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">location_on</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Thủ đô Hà Nội</p>
+                                        <p class="text-sm text-text-muted">Huyện Gia Lâm và Huyện Sóc Sơn</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">festival</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Thời gian</p>
+                                        <p class="text-sm text-text-muted">Tháng 1 và tháng 4 Âm lịch hàng năm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://vi.wikipedia.org/wiki/H%E1%BB%99i_Gi%C3%B3ng', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://hnm.1cdn.vn/2022/04/09/hanoimoi.com.vn-uploads-images-tuandiep-2022-04-09-_tin-nguong-tho-cung-hung-vu.jpg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2012
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Tín ngưỡng thờ cúng Hùng Vương</h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Đạo
+                                    lý nguồn cội</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Biểu tượng của khối đại đoàn kết dân tộc, thể hiện đạo lý "Uống nước nhớ nguồn". Đây là
+                                di sản duy nhất trên thế giới tôn vinh việc thờ cúng tổ tiên chung của cả một quốc gia.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">location_on</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Vùng đất Tổ</p>
+                                        <p class="text-sm text-text-muted">Khu di tích lịch sử Đền Hùng, Phú Thọ</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">groups</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Ý nghĩa</p>
+                                        <p class="text-sm text-text-muted">Gắn kết cộng đồng thông qua việc thờ chung
+                                            "Quốc Tổ"</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://vi.wikipedia.org/wiki/T%C3%ADn_ng%C6%B0%E1%BB%A1ng_th%E1%BB%9D_c%C3%BAng_H%C3%B9ng_V%C6%B0%C6%A1ng', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://i.pinimg.com/1200x/a8/ef/b5/a8efb586bbd93e9379f17c3aaa9709c6.jpg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2015
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Nghi lễ và trò chơi Kéo co</h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Văn
+                                    hóa lúa nước</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Di sản đa quốc gia thể hiện ước vọng về mưa thuận gió hòa và mùa màng tươi tốt. Tại Việt
+                                Nam, kéo co vừa là trò chơi dân gian hào hứng, vừa là nghi lễ tâm linh quan trọng.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">explore</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Phạm vi</p>
+                                        <p class="text-sm text-text-muted">Vĩnh Phúc, Lào Cai, Hà Nội và nhiều tỉnh Bắc
+                                            Bộ</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">inventory_2</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Vật liệu</p>
+                                        <p class="text-sm text-text-muted">Dây song, thân cây tre hoặc dây thừng bện</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://baochinhphu.vn/unesco-trao-bang-cong-nhan-nghi-le-va-tro-choi-keo-co-la-di-san-van-hoa-102247267.htm', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://ttdn.vn/Uploads/Images/2023/11/30/5/9116-10-3.9.jpg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2016
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Thực hành Tín ngưỡng thờ Mẫu Tam phủ
+                            </h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Đạo
+                                    Mẫu</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Sự kết hợp tinh tế giữa trang phục, âm nhạc (Hát văn) và múa thiêng (Hầu đồng). Tín
+                                ngưỡng này đề cao lòng trắc ẩn và sự bảo hộ của các vị Thánh Mẫu đối với con người.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">theater_comedy</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Hình thức</p>
+                                        <p class="text-sm text-text-muted">Lên đồng, hát văn, lễ hội truyền thống</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Giá trị</p>
+                                        <p class="text-sm text-text-muted">Tôn vinh người phụ nữ và sự hòa hợp với thiên
+                                            nhiên</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://bvhttdl.gov.vn/tin-nguong-tho-mau-tam-phu-di-san-van-hoa-phi-vat-the-tieu-bieu-cua-nguoi-viet-20221203171142092.htm', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://danangfantasticity.com/wp-content/uploads/2025/08/nghe-thuat-bai-choi-trung-bo-viet-nam-da-nang-05.jpg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2017
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12 lg:order-1">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Nghệ thuật Bài Chòi Trung Bộ</h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Dân
+                                    gian Trung Bộ</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Hình thức sinh hoạt văn hóa cộng đồng kết hợp giữa âm nhạc, thơ ca và hội bài. Những câu
+                                hò Bài Chòi đầy hóm hỉnh là món ăn tinh thần không thể thiếu của người dân miền Trung.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">map</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Duyên hải Trung Bộ</p>
+                                        <p class="text-sm text-text-muted">Từ Quảng Bình đến Khánh Hòa</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">speaker_notes</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Người trình diễn</p>
+                                        <p class="text-sm text-text-muted">Anh Hiệu và Chị Hiệu dẫn dắt trò chơi</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://vietnamtourism.gov.vn/post/25459', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://nhandan.vn/special/NghethuatXoeThai/assets/Nxkbn6aZwF/11t65-2886x1948.jpeg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2021
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Nghệ thuật Xòe Thái</h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Thái</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Điệu múa biểu tượng cho sự đoàn kết cộng đồng. Trong vòng xòe, mọi người nắm tay nhau
+                                không phân biệt già trẻ, giàu nghèo, cùng nhảy múa quanh đống lửa trong tiếng nhạc rộn
+                                ràng.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">location_on</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Vùng Tây Bắc</p>
+                                        <p class="text-sm text-text-muted">Yên Bái, Lai Châu, Sơn La, Điện Biên</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">diversity_3</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Ý nghĩa</p>
+                                        <p class="text-sm text-text-muted">Biểu tượng cho lòng hiếu khách và tính đoàn
+                                            kết</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://vietnamtourism.gov.vn/post/53804', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://bvhttdl.mediacdn.vn/291773308735864832/2022/11/30/19-5-16697364766711247800380-1669774122272-16697741224029625705.jpg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2022
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Nghệ thuật làm gốm của người Chăm</h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Chăm</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Di sản cần bảo vệ khẩn cấp. Kỹ thuật làm gốm hoàn toàn bằng tay, không dùng bàn xoay,
+                                người thợ đi giật lùi quanh sản phẩm và nung lộ thiên mang đậm bản sắc cổ xưa.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">history</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Làng nghề cổ</p>
+                                        <p class="text-sm text-text-muted">Bàu Trúc (Ninh Thuận), Bình Đức (Bình Thuận)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">warning</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Tình trạng</p>
+                                        <p class="text-sm text-text-muted">Cần bảo vệ khẩn cấp</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://vietnamtourism.gov.vn/post/46029', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                                Tìm hiểu thêm
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="mb-12 bg-white rounded-3xl border border-[#e7d7cf] overflow-hidden shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="grid lg:grid-cols-2 gap-0">
+                        <div class="relative aspect-[4/3] lg:aspect-auto">
+                            <div class="absolute inset-0 bg-cover bg-center"
+                                style='background-image: url("https://bcp.cdnchinhphu.vn/334894974524682240/2022/3/31/le-hoi-via-ba-1648713786120646784457.jpg");'>
+                            </div>
+                            <div class="absolute top-4 left-4">
+                                <div class="px-4 py-2 bg-accent-red text-white rounded-full text-xs font-bold flex items-center gap-2"
+                                    style="background-color: #e63946;">
+                                    <span class="material-symbols-outlined text-[16px]">verified</span>
+                                    UNESCO 2024
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-8 lg:p-12">
+                            <h2 class="text-3xl font-black text-text-main mb-4">Lễ hội Vía Bà Chúa Xứ Núi Sam</h2>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-semibold">Tín
+                                    ngưỡng Nam Bộ</span>
+                            </div>
+                            <p class="text-text-muted leading-relaxed mb-6">
+                                Lễ hội lớn nhất vùng Đồng bằng sông Cửu Long, thể hiện sự giao thoa văn hóa giữa các dân
+                                tộc Kinh, Hoa, Khmer, Chăm và lòng tôn kính đối với bậc tiền nhân có công khai phá vùng
+                                đất này.
+                            </p>
+                            <div class="space-y-3 mb-6">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">location_on</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">An Giang</p>
+                                        <p class="text-sm text-text-muted">Thành phố Châu Đốc</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-primary">calendar_month</span>
+                                    <div>
+                                        <p class="font-semibold text-sm mb-1">Thời gian</p>
+                                        <p class="text-sm text-text-muted">Từ 22 đến 27 tháng 4 Âm lịch hàng năm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button onclick="window.open('https://bvhttdl.gov.vn/an-giang-don-bang-cong-nhan-cua-unesco-va-khai-hoi-via-ba-chua-xu-nui-sam-20250320075446024.htm', '_blank')"
+                                class="px-6 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
                                 Tìm hiểu thêm
                             </button>
                         </div>
@@ -319,30 +843,7 @@
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="bg-gradient-to-br from-accent-red/5 to-primary/5 py-16 border-y border-[#e7d7cf]">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div>
-                        <div class="text-5xl font-black text-accent-red mb-2">14</div>
-                        <p class="text-text-muted font-semibold">Di sản UNESCO</p>
-                    </div>
-                    <div>
-                        <div class="text-5xl font-black text-accent-red mb-2">5</div>
-                        <p class="text-text-muted font-semibold">Từ dân tộc thiểu số</p>
-                    </div>
-                    <div>
-                        <div class="text-5xl font-black text-accent-red mb-2">54</div>
-                        <p class="text-text-muted font-semibold">Dân tộc</p>
-                    </div>
-                    <div>
-                        <div class="text-5xl font-black text-accent-red mb-2">100+</div>
-                        <p class="text-text-muted font-semibold">Lễ hội truyền thống</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <!-- CTA -->
         <section class="py-16">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -351,10 +852,12 @@
                     Tìm hiểu chi tiết về từng dân tộc, lễ hội và di sản văn hóa được bảo tồn
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="festival.html" class="px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
+                    <a href="festival.html"
+                        class="px-8 py-3 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold transition-all">
                         Xem Lễ hội
                     </a>
-                    <a href="list.html" class="px-8 py-3 border-2 border-gray-200 hover:border-primary hover:text-primary rounded-lg font-bold transition-all">
+                    <a href="list.html"
+                        class="px-8 py-3 border-2 border-gray-200 hover:border-primary hover:text-primary rounded-lg font-bold transition-all">
                         54 Dân tộc
                     </a>
                 </div>
@@ -362,15 +865,12 @@
         </section>
     </main>
 
-     <!-- Footer -->
+    <!-- Footer -->
     <footer class="bg-[#1b120d] text-white/80 py-12 md:py-16">
         <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
                 <div>
                     <div class="flex items-center gap-3 mb-6">
-                        <div class="size-10 text-white flex items-center justify-center rounded-full bg-accent-red">
-                            <span class="material-symbols-outlined text-[24px]">museum</span>
-                        </div>
                         <span class="text-white font-bold text-xl font-serif">Triển Lãm 54 Dân Tộc</span>
                     </div>
                     <p class="text-sm leading-relaxed text-white/60">
@@ -383,7 +883,8 @@
                         <li><a href="List.html" class="hover:text-primary transition-colors">Danh sách dân tộc</a></li>
                         <li><a href="Map.html" class="hover:text-primary transition-colors">Bản đồ phân bố</a></li>
                         <li><a href="Heritage.html" class="hover:text-primary transition-colors">Di sản văn hóa</a></li>
-                        <li><a href="Gallery.html" class="hover:text-primary transition-colors">Gallery hình ảnh</a></li>
+                        <li><a href="Gallery.html" class="hover:text-primary transition-colors">Gallery hình ảnh</a>
+                        </li>
                     </ul>
                 </div>
                 <div>
@@ -399,13 +900,16 @@
                     <h4 class="text-white font-bold text-lg mb-4">Theo dõi</h4>
                     <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
                     <div class="flex gap-3">
-                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
                             <span class="material-symbols-outlined text-xl">thumb_up</span>
                         </a>
-                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
                             <span class="material-symbols-outlined text-xl">play_circle</span>
                         </a>
-                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center" href="#">
+                        <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            href="#">
                             <span class="material-symbols-outlined text-xl">photo_camera</span>
                         </a>
                     </div>
@@ -446,10 +950,10 @@
         }
 
         // Initialize button styles
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const activeBtn = document.querySelector('.month-btn.active');
             activeBtn.classList.add('bg-primary', 'text-white');
-            
+
             const otherBtns = document.querySelectorAll('.month-btn:not(.active)');
             otherBtns.forEach(btn => {
                 btn.classList.add('bg-gray-100', 'text-text-main');
@@ -457,8 +961,15 @@
         });
     </script>
     <style>
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </body>
+
 </html>

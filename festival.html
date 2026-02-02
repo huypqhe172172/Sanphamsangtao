@@ -38,7 +38,7 @@
         <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3">
-                    <a href="Home.html" class="flex items-center gap-3">
+                    <a href="index.html" class="flex items-center gap-3">
                         <div class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
                             <span class="material-symbols-outlined text-[32px]">museum</span>
                         </div>
@@ -46,7 +46,7 @@
                     </a>
                 </div>
                 <nav class="hidden lg:flex items-center gap-6">
-                    <a href="home.html" class="text-sm font-medium transition-colors hover:text-primary">Trang chủ</a>
+                    <a href="index.html" class="text-sm font-medium transition-colors hover:text-primary">Trang chủ</a>
                     <a href="list.html" class="text-sm font-medium transition-colors hover:text-primary">Danh sách</a>
                     <a href="map.html" class="text-sm font-medium transition-colors hover:text-primary">Bản đồ</a>
                     <a href="gallery.html" class="text-sm font-medium transition-colors hover:text-primary">Hình ảnh</a>
@@ -77,14 +77,7 @@
                     <p class="text-lg text-text-muted leading-relaxed mb-8">
                         Khám phá những lễ hội đặc sắc, lưu giữ tinh hoa văn hóa và tín ngưỡng của các dân tộc Việt Nam qua hàng nghìn năm lịch sử.
                     </p>
-                    <div class="flex gap-3">
-                        <div class="px-4 py-2 bg-white rounded-full border border-[#e7d7cf] text-sm font-semibold">
-                            <span class="text-primary">50+</span> Lễ hội
-                        </div>
-                        <div class="px-4 py-2 bg-white rounded-full border border-[#e7d7cf] text-sm font-semibold">
-                            <span class="text-primary">54</span> Dân tộc
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
         </section>
@@ -93,8 +86,7 @@
         <section class="border-b border-[#e7d7cf] bg-white sticky top-20 z-40">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-4">
                 <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-text-muted">calendar_month</span>
-                    <p class="font-semibold text-sm">Lọc theo tháng:</p>
+                    
                     <div class="flex gap-2 overflow-x-auto no-scrollbar">
                         <button onclick="filterByMonth('all')" class="month-btn active px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap">Tất cả</button>
                         <button onclick="filterByMonth('1')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 1</button>
@@ -103,6 +95,12 @@
                         <button onclick="filterByMonth('4')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 4</button>
                         <button onclick="filterByMonth('5')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 5</button>
                         <button onclick="filterByMonth('6')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 6</button>
+                        <button onclick="filterByMonth('7')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 7</button>
+                        <button onclick="filterByMonth('8')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 8</button>
+                        <button onclick="filterByMonth('9')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 9</button>
+                        <button onclick="filterByMonth('10')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng10</button>
+                        <button onclick="filterByMonth('11')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 11</button>
+                        <button onclick="filterByMonth('12')" class="month-btn px-4 py-2 rounded-full text-sm whitespace-nowrap">Tháng 12</button>
                     </div>
                 </div>
             </div>
@@ -112,21 +110,29 @@
         <section class="py-12">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <!-- Festival Card 1 - Gau Tao -->
+                 <!-- Festival Card 1 - Gau Tao -->
                 <div class="festival-card mb-8" data-month="1">
-                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="grid md:grid-cols-5 gap-0">
                             <div class="md:col-span-2 aspect-video md:aspect-auto">
-                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCu1qDM54iW-1wnxzM12gPIuunp_9pX5Je-3hLDZBoyZS7VwmFNG9hSQzhh6bNc-KLjj2o5Uty_FPJj_e5XPS1LpnZ86WI0pOV1sJdn6a7fyPLcE1woOJJiRGUyOiJnT0boyoaWtu-aWcyDBJWU9v8yzDks666yUSByx5nZ5shoJHNfvQby8beT494P59i1rc4EqkFelP-2clJhVtlYP4roLJYkYpDOy3Ysnzuf2DKgcHMFb3vzopyTBjJX6tQ8t6ZXVot4rr7mubA");'></div>
+                                <div class="w-full h-full bg-cover bg-center"
+                                    style='background-image: url("https://i.pinimg.com/1200x/35/a0/c9/35a0c957b7271104ac9fa1202bc968e9.jpg");'>
+                                </div>
                             </div>
                             <div class="md:col-span-3 p-8">
                                 <div class="flex items-center gap-3 mb-4">
-                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 1-2</div>
-                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">H'Mông</div>
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 1-2</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        H'Mông</div>
                                 </div>
                                 <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Gau Tao</h2>
                                 <p class="text-text-muted leading-relaxed mb-4">
-                                    Gau Tao là lễ hội truyền thống quan trọng nhất của người H'Mông, thường được tổ chức vào tháng Giêng hoặc tháng Hai âm lịch. Lễ hội là dịp để cộng đồng cầu mong một năm mới mưa thuận gió hòa, mùa màng bội thu.
+                                    Gau Tao là lễ hội truyền thống quan trọng nhất của người H'Mông, thường được tổ chức
+                                    vào tháng Giêng hoặc tháng Hai âm lịch. Lễ hội là dịp để cộng đồng cầu mong một năm
+                                    mới mưa thuận gió hòa, mùa màng bội thu.
                                 </p>
                                 <div class="flex flex-wrap gap-4 mb-4">
                                     <div class="flex items-center gap-2 text-sm text-text-muted">
@@ -139,12 +145,11 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                    <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_g%E1%BA%A7u_t%C3%A0o', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
                                         Xem chi tiết
                                     </button>
-                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
-                                        Lưu lại
-                                    </button>
+
                                 </div>
                             </div>
                         </div>
@@ -153,19 +158,27 @@
 
                 <!-- Festival Card 2 - Chợ Tình Khâu Vai -->
                 <div class="festival-card mb-8" data-month="3">
-                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="grid md:grid-cols-5 gap-0">
                             <div class="md:col-span-2 aspect-video md:aspect-auto">
-                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKm89qY3i6ceZzXa5s3r6Yz9zQPZ5fkFAsxFhlWbs7cIrOlz_-l94PKmVj5Nq_Wd9mKwqTLUnLbdp3ljfgid2wNSpJFtxe1nHwVnmIqcMckMCRLobAo4SehSdBEgfZHAwLKerWXStEoxNls3rlaNTymYp_wHXnRDQMi4BzHs1zh_b5l8qR4c5vexuNg5X2mjMjzvzbxghP5AB8c3omt9t-6LJeFsL-sIbThhNsCxj29VISOGFeMdbjbPUsAmroJjLuj9tdq50jIM0");'></div>
+                                <div class="w-full h-full bg-cover bg-center"
+                                    style='background-image: url("https://i.pinimg.com/736x/60/73/73/6073739c5d65148a3b24319d84945489.jpg");'>
+                                </div>
                             </div>
                             <div class="md:col-span-3 p-8">
                                 <div class="flex items-center gap-3 mb-4">
-                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 3</div>
-                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">H'Mông, Dao, Tày</div>
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 3</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        H'Mông, Dao, Tày</div>
                                 </div>
                                 <h2 class="text-2xl font-black text-text-main mb-3">Chợ Tình Khâu Vai</h2>
                                 <p class="text-text-muted leading-relaxed mb-4">
-                                    Chợ tình Khâu Vai là một nét văn hóa độc đáo của vùng cao Hà Giang, diễn ra vào ngày 27 tháng 3 âm lịch hàng năm. Đây là dịp để những cặp đôi đã có gia đình được gặp lại tình yêu thuở ban đầu, chia sẻ những tâm sự và kỷ niệm.
+                                    Chợ tình Khâu Vai là một nét văn hóa độc đáo của vùng cao Hà Giang, diễn ra vào ngày
+                                    27 tháng 3 âm lịch hàng năm. Đây là dịp để những cặp đôi đã có gia đình được gặp lại
+                                    tình yêu thuở ban đầu, chia sẻ những tâm sự và kỷ niệm.
                                 </p>
                                 <div class="flex flex-wrap gap-4 mb-4">
                                     <div class="flex items-center gap-2 text-sm text-text-muted">
@@ -178,12 +191,11 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/Ch%E1%BB%A3_Khau_Vai', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
                                         Xem chi tiết
                                     </button>
-                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
-                                        Lưu lại
-                                    </button>
+
                                 </div>
                             </div>
                         </div>
@@ -192,19 +204,27 @@
 
                 <!-- Festival Card 3 - Hội Cồng Chiêng -->
                 <div class="festival-card mb-8" data-month="3">
-                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="grid md:grid-cols-5 gap-0">
                             <div class="md:col-span-2 aspect-video md:aspect-auto">
-                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA86HkKP-1peDc_dhA2-bjJS9agn7BPXfs-5AeaIIIgNXHOhnBq9BhgFPyksfxdXqJ6vvgMUB4EIcOPVs2x3YQ9EXoLAjxqS4O0JoPgS2DpHkpzWqCRcd5-4lvQ7oTxZyK6Dj9qS0IeqQzSE8wYftbpLcY5R2U6seCvyp9MkPRgD-weEJX_RZrllZ2sTqu5TVowfIsqhyCfdOzSnK7J-TuCQvaKpwW2G1Af2eeGEAIhvYy2Cgu-EtX2xolnDvCfZo9fa4W8e14qRhM");'></div>
+                                <div class="w-full h-full bg-cover bg-center"
+                                    style='background-image: url("https://i.pinimg.com/1200x/81/52/51/815251da5be6e8f8241d384b54806146.jpg");'>
+                                </div>
                             </div>
                             <div class="md:col-span-3 p-8">
                                 <div class="flex items-center gap-3 mb-4">
-                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 3</div>
-                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">Ê Đê, Ba Na, Gia Rai</div>
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 3</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Ê Đê, Ba Na, Gia Rai</div>
                                 </div>
                                 <h2 class="text-2xl font-black text-text-main mb-3">Hội Cồng Chiêng Tây Nguyên</h2>
                                 <p class="text-text-muted leading-relaxed mb-4">
-                                    Không gian văn hóa Cồng chiêng Tây Nguyên đã được UNESCO công nhận là Di sản văn hóa phi vật thể đại diện của nhân loại. Lễ hội cồng chiêng là dịp để các dân tộc Tây Nguyên tôn vinh nhạc cụ truyền thống và sinh hoạt cộng đồng.
+                                    Không gian văn hóa Cồng chiêng Tây Nguyên đã được UNESCO công nhận là Di sản văn hóa
+                                    phi vật thể đại diện của nhân loại. Lễ hội cồng chiêng là dịp để các dân tộc Tây
+                                    Nguyên tôn vinh nhạc cụ truyền thống và sinh hoạt cộng đồng.
                                 </p>
                                 <div class="flex flex-wrap gap-4 mb-4">
                                     <div class="flex items-center gap-2 text-sm text-text-muted">
@@ -217,12 +237,11 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_C%E1%BB%93ng_chi%C3%AAng', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
                                         Xem chi tiết
                                     </button>
-                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
-                                        Lưu lại
-                                    </button>
+
                                 </div>
                             </div>
                         </div>
@@ -231,19 +250,27 @@
 
                 <!-- Festival Card 4 - Ok Om Bok -->
                 <div class="festival-card mb-8" data-month="10">
-                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="grid md:grid-cols-5 gap-0">
                             <div class="md:col-span-2 aspect-video md:aspect-auto">
-                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBwKujUb9IjQPm-jEIbnJEJ4FJ2ecBBdJs24TWrJSmWXQ7RQw9bN26Ow9oW2Cb78s8VCKG6x5v-lKHczwShQ8z1i5sp8iaVLbNDExF4N5MOIoVtFe0bqIi3BEn9x5b0_RdYx6IQxl42bJnMQu2cdPh-a41IG3oNDFXgF3CtTn9b98kqVy-TEri618FyZajn_Ftki70dRyT3SmaBpDWAaTgNBcv9rsHMQMIwCs6xLEtrlxXFJUP1ve2_gQM3_xNnbC9l1XhOV6N7qjQ");'></div>
+                                <div class="w-full h-full bg-cover bg-center"
+                                    style='background-image: url("https://i.pinimg.com/1200x/94/76/6e/94766eac8c38195c8e20b157a7599a2e.jpg");'>
+                                </div>
                             </div>
                             <div class="md:col-span-3 p-8">
                                 <div class="flex items-center gap-3 mb-4">
-                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 10</div>
-                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">Khmer</div>
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 10</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Khmer</div>
                                 </div>
                                 <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Ok Om Bok</h2>
                                 <p class="text-text-muted leading-relaxed mb-4">
-                                    Ok Om Bok (Lễ cúng trăng) là lễ hội truyền thống quan trọng của người Khmer, tổ chức vào rằm tháng 10 âm lịch. Lễ hội thể hiện lòng biết ơn của con người đối với sự ban tặng của trời đất và mong cầu cho một mùa màng bội thu.
+                                    Ok Om Bok (Lễ cúng trăng) là lễ hội truyền thống quan trọng của người Khmer, tổ chức
+                                    vào rằm tháng 10 âm lịch. Lễ hội thể hiện lòng biết ơn của con người đối với sự ban
+                                    tặng của trời đất và mong cầu cho một mùa màng bội thu.
                                 </p>
                                 <div class="flex flex-wrap gap-4 mb-4">
                                     <div class="flex items-center gap-2 text-sm text-text-muted">
@@ -256,12 +283,11 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Ok_om_bok', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
                                         Xem chi tiết
                                     </button>
-                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
-                                        Lưu lại
-                                    </button>
+
                                 </div>
                             </div>
                         </div>
@@ -270,19 +296,27 @@
 
                 <!-- Festival Card 5 - Xên Bản Xên Mường -->
                 <div class="festival-card mb-8" data-month="2">
-                    <div class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
                         <div class="grid md:grid-cols-5 gap-0">
                             <div class="md:col-span-2 aspect-video md:aspect-auto">
-                                <div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCUhZq2zcW8HXImvbxz42ReXxzaDTYzgrZ6kpBzSMZ9pXgaQtRYIf9Lc9nM5WqNyDC63qfasEezxH7VgDi44-aOXPFZNu3HpwXxkXwyNiXJ3SRXa4GsGm1fJjLStN7A2bO9d-BUl4vPIGj3ZA4XLKD9ExFCiyzBlIqzuK0go28avmp5G20DAf3xG2G9Os3EoQ8b1bVuir3ME4TN5BXZEmhKUw5-1giQwoIVWCjxtlsISJ0vJ8kz7lTD5yFfsURBXU-rj8rIJEEz3g");'></div>
+                                <div class="w-full h-full bg-cover bg-center"
+                                    style='background-image: url("https://maichauhideaway.com/Data/Sites/1/News/267/image1.jpg");'>
+                                </div>
                             </div>
                             <div class="md:col-span-3 p-8">
                                 <div class="flex items-center gap-3 mb-4">
-                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">Tháng 2</div>
-                                    <div class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">Thái</div>
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 2</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Thái</div>
                                 </div>
                                 <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Xên Bản Xên Mường</h2>
                                 <p class="text-text-muted leading-relaxed mb-4">
-                                    Xên Bản Xên Mường là lễ hội làm bản làm mường của người Thái, tổ chức vào tháng Giêng âm lịch. Lễ hội thể hiện tinh thần cộng đồng, sum họp và cầu mong bình an, thịnh vượng cho bản làng trong năm mới.
+                                    Xên Bản Xên Mường là lễ hội làm bản làm mường của người Thái, tổ chức vào tháng
+                                    Giêng âm lịch. Lễ hội thể hiện tinh thần cộng đồng, sum họp và cầu mong bình an,
+                                    thịnh vượng cho bản làng trong năm mới.
                                 </p>
                                 <div class="flex flex-wrap gap-4 mb-4">
                                     <div class="flex items-center gap-2 text-sm text-text-muted">
@@ -295,11 +329,557 @@
                                     </div>
                                 </div>
                                 <div class="flex gap-3">
-                                    <button class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_x%C3%AAn_b%E1%BA%A3n,_x%C3%AAn_m%C6%B0%E1%BB%9Dng', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
                                         Xem chi tiết
                                     </button>
-                                    <button class="px-6 py-2 border border-[#e7d7cf] hover:border-primary hover:text-primary rounded-lg font-semibold transition-all">
-                                        Lưu lại
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- New festival -->
+                <div class="festival-card mb-8" data-month="1">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200 flex items-center justify-center text-gray-500"
+                                    style='background-image: url("https://maichauhideaway.com/Data/Sites/1/News/334/le-hoi-long-tong-1.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 1</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Tày, Nùng</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Lồng Tồng</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Lồng Tồng (Hội xuống đồng) là lễ hội tiêu biểu của người Tày, Nùng dịp đầu xuân. Đây
+                                    là dịp để tạ ơn Thần Nông, cầu xin mưa thuận gió hòa, cây cối tốt tươi, mùa màng bội
+                                    thu và tổ chức các trò chơi dân gian như tung còn, thi cấy.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Tuyên Quang, Bắc Kạn, Cao Bằng</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>1-3 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_L%E1%BB%93ng_t%E1%BB%93ng', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="3">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200 flex items-center justify-center text-gray-500"
+                                    style='background-image: url("https://xdcs.cdnchinhphu.vn/446259493575335936/2023/1/7/001-6-1673057777174385239911.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 3</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Thái</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Hoa Ban</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Lễ hội Hoa Ban (Xên Mường) được tổ chức vào tháng 3 dương lịch khi hoa ban nở trắng
+                                    núi rừng Tây Bắc. Lễ hội thể hiện nét văn hóa tâm linh, cầu mong cuộc sống ấm no và
+                                    tôn vinh tình yêu đôi lứa sắt son qua sự tích nàng Ban và chàng Khum.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Điện Biên, Sơn La</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>2-3 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_hoa_ban', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="4">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200 flex items-center justify-center text-gray-500"
+                                    style='background-image: url("https://image.vietmy.net.vn/public/data/images/0/2024/04/02/upload_2148/5444.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 4</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Khmer</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Tết Chol Chnam Thmay</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Chol Chnam Thmay là lễ hội mừng năm mới cổ truyền quan trọng nhất của đồng bào Khmer
+                                    Nam Bộ, thường diễn ra vào giữa tháng 4 dương lịch. Lễ hội bao gồm các nghi thức như
+                                    lễ rước Đại lịch, lễ tắm Phật và đắp núi cát để cầu phúc.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Sóc Trăng, Trà Vinh, Kiên Giang</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>3-4 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Chol_Chnam_Thmay', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="10">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200 flex items-center justify-center text-gray-500"
+                                    style='background-image: url("https://cellphones.com.vn/sforum/wp-content/uploads/2023/12/le-hoi-kate-5.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 10</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Chăm</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Katê</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Katê là lễ hội lớn nhất và thiêng liêng nhất của người Chăm theo đạo Bà La Môn, diễn
+                                    ra vào tháng 7 lịch Chăm (khoảng tháng 10 dương lịch) tại các khu đền tháp. Lễ hội
+                                    tưởng nhớ các vị thần và ông bà tổ tiên, cầu mong mưa thuận gió hòa.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Ninh Thuận, Bình Thuận</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                                        <span>Di sản phi vật thể QG</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_Kat%C3%A9', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="4">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200"
+                                    style='background-image: url("https://thanhnien.mediacdn.vn/Uploaded/2014/Pictures20114/NgocThanh/214/Ponaga1.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 4 (Dương lịch)</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Chăm, Kinh</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Tháp Bà Ponagar</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Diễn ra tại quần thể tháp cổ Nha Trang (20-23 tháng 3 Âm lịch), lễ hội tôn vinh
+                                    Thiên Y A Na Thánh Mẫu - người Mẹ xứ sở đã dạy dân cày cấy, dệt vải. Đây là dịp hiếm
+                                    hoi du khách thấy sự hòa quyện nghi thức giữa bóng dáng áo dài khăn đóng của người
+                                    Kinh và điệu múa bóng rực rỡ sắc màu của người Chăm.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Nha Trang (Khánh Hòa)</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                                        <span>Di sản phi vật thể QG</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_th%C3%A1p_B%C3%A0_Po_Nagar', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="5">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200"
+                                    style='background-image: url("https://images2.thanhnien.vn/528068263637045248/2024/4/25/a2-17140383435321917602300.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 5 (Dương lịch)</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Kinh, Hoa, Khmer</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Vía Bà Chúa Xứ</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Được ví là "mùa lễ hội" của miền Tây, Lễ Vía Bà Chúa Xứ Núi Sam (23-27 tháng 4 Âm
+                                    lịch) tái hiện truyền thuyết rước tượng Bà từ đỉnh núi xuống. Điểm nhấn là nghi thức
+                                    "Lễ Tắm Bà" vào đêm khuya, thu hút hàng vạn người hành hương cầu tài lộc, bình an
+                                    tại vùng đất biên giới linh thiêng.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Châu Đốc (An Giang)</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>4-5 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_mi%E1%BA%BFu_B%C3%A0_Ch%C3%BAa_X%E1%BB%A9', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="6">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200"
+                                    style='background-image: url("https://dbnd.1cdn.vn/2024/07/05/d340c52f29de1fbef2869459d2a50033dd30c5f8605a84ccedfe722b71135366c523369ebf-_1988209_mua_rong_trong_le_hoi_08-1720088346651.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 6 (Dương lịch)</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Kinh</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Đình Trà Cổ</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Diễn ra từ 30/5 đến 6/6 Âm lịch tại ngôi đình được mệnh danh là "Cột mốc văn hóa
+                                    Việt", lễ hội đình Trà Cổ nổi tiếng với tục thi "Ông Voi" (thi lợn béo). Đây là nét
+                                    văn hóa độc đáo của cư dân ven biển nhằm tưởng nhớ các vị Tiên công đã có công khai
+                                    khẩn vùng đất địa đầu Móng Cái.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Móng Cái (Quảng Ninh)</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                                        <span>Di sản phi vật thể QG</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/%C4%90%C3%ACnh_Tr%C3%A0_C%E1%BB%95', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="7">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200"
+                                    style='background-image: url("https://danangfantasticity.com/wp-content/uploads/2025/08/le-hoi-cau-ngu-da-nang-03-1024x576.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 7 (Dương lịch)</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Ngư dân miền Trung</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Cầu Ngư (Lễ tế Cá Ông)</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Thường diễn ra vào tháng 6-7 âm lịch tại các làng chài ven biển Nam Trung Bộ. Đây là
+                                    tín ngưỡng thờ cúng Cá Ông (cá voi) - vị thần hộ mệnh của ngư dân giữa biển khơi. Lễ
+                                    hội rực rỡ với cờ phướn, đội chèo bả trạo hát hò khoan, cầu mong những chuyến biển
+                                    bình yên và tôm cá đầy khoang.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Đà Nẵng, Quảng Nam, Bình Thuận</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                                        <span>Di sản phi vật thể QG</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://mia.vn/cam-nang-du-lich/le-hoi-cau-ngu-da-nang-kham-pha-net-dac-sac-trong-van-hoa-ngu-dan-vung-bien-da-nang-1935', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="8">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200"
+                                    style='background-image: url("https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2023/1/10/1136562/Le-Hoi-Dien-Hon-Chen.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 8 (Dương lịch)</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Kinh (Cố đô Huế)</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Điện Huệ Nam (Hòn Chén)</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Diễn ra vào tháng 7 Âm lịch trên sông Hương, đây là lễ hội tiêu biểu cho tín ngưỡng
+                                    thờ Mẫu tại Huế. Điểm nhấn là đám rước bằng thuyền rồng nối đuôi nhau (Bằng) rực rỡ
+                                    sắc màu, cùng các nghi thức lên đồng trang nghiêm, huyền ảo, thể hiện lòng tôn kính
+                                    với Thánh Mẫu Thiên Y A Na.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Thừa Thiên Huế</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>2-3 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://khamphahue.com.vn/Van-hoa/Chi-tiet/tid/Le-Hoi-Dien-Hon-Chen.html/pid/3036/cid/198', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="9">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200"
+                                    style='background-image: url("https://image.tinnhanhchungkhoan.vn/w1200/Uploaded/2026/wpxlcdjwi/2023_09_24/3-9892.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 9 (Dương lịch)</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Kinh (Đất Cảng)</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Chọi Trâu Đồ Sơn</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    "Dù ai buôn đâu bán đâu / Mùng chín tháng tám chọi trâu thì về". Lễ hội diễn ra vào
+                                    tháng 8 Âm lịch (thường là tháng 9 Dương lịch), gắn liền với tục thờ cúng thủy thần
+                                    và tinh thần thượng võ của người dân miền biển. Những "ông trâu" được chăm sóc kỹ
+                                    lưỡng cống hiến những trận đấu kịch tính và hào hứng.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Đồ Sơn (Hải Phòng)</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">verified</span>
+                                        <span>Di sản phi vật thể QG</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://vi.wikipedia.org/wiki/L%E1%BB%85_h%E1%BB%99i_ch%E1%BB%8Di_tr%C3%A2u_%C4%90%E1%BB%93_S%C6%A1n', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="11">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200"
+                                    style='background-image: url("https://media.loveitopcdn.com/20397/29954-le-hoi-mung-lua-moi-670x446.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 11 (Dương lịch)</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Ê Đê, Gia Rai, Ba Na</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Lễ hội Mừng Lúa Mới</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Khi những cơn mưa Tây Nguyên dứt hạt và lúa đã về kho (khoảng tháng 11-12), đồng bào
+                                    các dân tộc tổ chức lễ Ăn cơm mới để tạ ơn thần Lúa, thần Trời. Trong tiếng cồng
+                                    chiêng vang vọng, già làng vít cần rượu, mời khách ăn những hạt cơm thơm dẻo đầu
+                                    tiên của vụ mùa.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Kon Tum, Gia Lai, Đắk Lắk</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>Sau vụ thu hoạch</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://daklakmuseum.vn/tin-tuc-su-kien/bai-viet/le-mung-lua-moi-cua-nguoi-xo-dang-?lng=en', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="festival-card mb-8" data-month="12">
+                    <div
+                        class="bg-white rounded-2xl border border-[#e7d7cf] overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="grid md:grid-cols-5 gap-0">
+                            <div class="md:col-span-2 aspect-video md:aspect-auto">
+                                <div class="w-full h-full bg-cover bg-center bg-gray-200"
+                                    style='background-image: url("https://media.vietnamplus.vn/images/7255a701687d11cb8c6bbc58a6c8078564b4f7a928e34e272dc156b4b042b7e52d909829708ac755e31688767fe5ed70c8b3b10e50b1bb194bff5e29c2cedce84f9efb0c8972265f49d8f86164867992/tet_co_truyen_nguoi_ha_nhi_3.jpg");'>
+                                </div>
+                            </div>
+                            <div class="md:col-span-3 p-8">
+                                <div class="flex items-center gap-3 mb-4">
+                                    <div class="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs font-bold">
+                                        Tháng 12 (Dương lịch)</div>
+                                    <div
+                                        class="px-3 py-1 bg-accent-gold/30 text-accent-red rounded-full text-xs font-bold">
+                                        Hà Nhì</div>
+                                </div>
+                                <h2 class="text-2xl font-black text-text-main mb-3">Tết Hà Nhì (Hồ Sự Chà)</h2>
+                                <p class="text-text-muted leading-relaxed mb-4">
+                                    Một trong những cái Tết sớm nhất Việt Nam! Người Hà Nhì ăn Tết ngay từ đầu tháng 12
+                                    dương lịch (tháng con Chuột). Lễ hội rộn ràng với bánh dày, thịt lợn và các trò chơi
+                                    dân gian như đu quay, bập bênh. Đây là nét văn hóa độc đáo nơi ngã ba biên giới A Pa
+                                    Chải và vùng núi cao Y Tý.
+                                </p>
+                                <div class="flex flex-wrap gap-4 mb-4">
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">location_on</span>
+                                        <span>Điện Biên, Lào Cai, Lai Châu</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-sm text-text-muted">
+                                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                                        <span>3-5 ngày</span>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3">
+                                     <button onclick="window.open('https://laichau.gov.vn/gioi-thieu/truyen-thong-van-hoa/tet-ho-su-cha.html', '_blank')"
+                                        class="px-6 py-2 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold transition-all">
+                                        Xem chi tiết
                                     </button>
                                 </div>
                             </div>
@@ -347,19 +927,18 @@
                 <div>
                     <h4 class="text-white font-bold text-lg mb-4">Khám phá</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="List.html" class="hover:text-primary transition-colors">Danh sách dân tộc</a></li>
-                        <li><a href="Map.html" class="hover:text-primary transition-colors">Bản đồ phân bố</a></li>
-                        <li><a href="Heritage.html" class="hover:text-primary transition-colors">Di sản văn hóa</a></li>
-                        <li><a href="Gallery.html" class="hover:text-primary transition-colors">Gallery hình ảnh</a></li>
+                        <li><a href="list.html" class="hover:text-primary transition-colors">Danh sách dân tộc</a></li>
+                        <li><a href="map.html" class="hover:text-primary transition-colors">Bản đồ phân bố</a></li>
+                        <li><a href="heritage.html" class="hover:text-primary transition-colors">Di sản văn hóa</a></li>
+                        <li><a href="gallery.html" class="hover:text-primary transition-colors">Gallery hình ảnh</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-white font-bold text-lg mb-4">Thông tin</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="About.html" class="hover:text-primary transition-colors">Về chúng tôi</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Liên hệ</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Chính sách bảo mật</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Điều khoản sử dụng</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Về chúng tôi</a></li>
+                        <li><a class="hover:text-primary transition-colors">Liên hệ : 0868172958</a></li>
+                       
                     </ul>
                 </div>
                 <div>
@@ -379,7 +958,7 @@
                 </div>
             </div>
             <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-                <p>© 2024 Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
+                <p>© 2026 Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
             </div>
         </div>
     </footer>
