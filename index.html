@@ -5,6 +5,10 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Trang Chủ - Triển Lãm 54 Dân Tộc Việt Nam</title>
+    <meta name="description"
+        content="Khám phá văn hóa đặc sắc của 54 dân tộc Việt Nam qua triển lãm số. Tìm hiểu về di sản, phong tục, trang phục và lễ hội truyền thống." />
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -12,6 +16,8 @@
         rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
         rel="stylesheet" />
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script>
         tailwind.config = {
@@ -31,116 +37,195 @@
                         "display": ["Plus Jakarta Sans", "sans-serif"],
                         "serif": ["Playfair Display", "serif"],
                     },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
+                        'gradient-flow': 'gradient-flow 8s ease infinite',
+                    },
                 },
             },
         }
     </script>
-    <style>
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
 
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body class="bg-background-light text-text-main font-display antialiased overflow-x-hidden">
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-white font-display antialiased overflow-x-hidden transition-colors duration-300">
+
+    <!-- Floating Particles Background -->
+    <div class="particles-container" aria-hidden="true">
+        <div class="particle" style="top: 10%; left: 20%; animation-delay: 0s;"></div>
+        <div class="particle" style="top: 40%; left: 80%; animation-delay: 1s;"></div>
+        <div class="particle" style="top: 70%; left: 30%; animation-delay: 2s;"></div>
+        <div class="particle" style="top: 20%; left: 60%; animation-delay: 1.5s;"></div>
+        <div class="particle" style="top: 80%; left: 70%; animation-delay: 0.5s;"></div>
+    </div>
+
     <!-- Unified Header -->
-    <header class="fixed top-0 left-0 right-0 z-50 bg-[#fcf9f8]/95 backdrop-blur-md border-b border-[#e7d7cf]">
+    <header class="fixed top-0 left-0 right-0 z-50 glass border-b border-[#e7d7cf] dark:border-accent-red/20">
         <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <div class="flex items-center gap-3">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-3 group">
                     <div
-                        class="size-10 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/20">
+                        class="size-12 text-accent-red flex items-center justify-center rounded-full bg-accent-gold/30 group-hover:bg-primary/20 transition-colors duration-300 group-hover:scale-110 transform">
                         <span class="material-symbols-outlined text-[32px]">museum</span>
                     </div>
-                    <span class="text-accent-red font-bold text-xl tracking-tight hidden sm:block font-serif">Triển Lãm
-                        54 Dân Tộc</span>
-                </div>
+                    <span
+                        class="text-accent-red dark:text-accent-gold font-bold text-xl tracking-tight hidden sm:block font-serif group-hover:text-primary transition-colors">Triển
+                        Lãm 54 Dân Tộc</span>
+                </a>
+
+                <!-- Navigation -->
                 <nav class="hidden md:flex items-center gap-8">
-                    <a class="text-primary text-sm font-bold transition-colors" href="index.html">Trang chủ</a>
-                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                    <a class="text-primary text-sm font-bold transition-colors text-underline-animated"
+                        href="index.html">Trang chủ</a>
+                    <a class="text-[#1b120d] dark:text-white/80 hover:text-primary text-sm font-medium transition-colors text-underline-animated"
                         href="list.html">Danh sách</a>
-                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                    <a class="text-[#1b120d] dark:text-white/80 hover:text-primary text-sm font-medium transition-colors text-underline-animated"
                         href="map.html">Bản đồ</a>
-                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                    <a class="text-[#1b120d] dark:text-white/80 hover:text-primary text-sm font-medium transition-colors text-underline-animated"
                         href="gallery.html">Hình ảnh</a>
-                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
-                        href="festival.html">lễ hội</a>
-                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                    <a class="text-[#1b120d] dark:text-white/80 hover:text-primary text-sm font-medium transition-colors text-underline-animated"
+                        href="festival.html">Lễ hội</a>
+                    <a class="text-[#1b120d] dark:text-white/80 hover:text-primary text-sm font-medium transition-colors text-underline-animated"
                         href="heritage.html">Di sản</a>
-                    <a class="text-[#1b120d] hover:text-primary text-sm font-medium transition-colors"
+                    <a class="text-[#1b120d] dark:text-white/80 hover:text-primary text-sm font-medium transition-colors text-underline-animated"
                         href="about.html">Giới thiệu</a>
                 </nav>
+
+                <!-- Actions -->
                 <div class="flex items-center gap-4">
                     <button onclick="toggleDarkMode()"
-                        class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 transition-colors">
-                        <span class="material-symbols-outlined text-[20px]">brightness_6</span>
+                        class="hidden sm:flex items-center justify-center size-10 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-all duration-300 hover:scale-110"
+                        aria-label="Toggle dark mode">
+                        <span class="material-symbols-outlined text-[20px] dark:text-white">brightness_6</span>
                     </button>
-                    <button class="md:hidden p-2">
-                        <span class="material-symbols-outlined">menu</span>
+                    <button class="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-lg transition-colors"
+                        data-menu-toggle>
+                        <span class="material-symbols-outlined dark:text-white">menu</span>
                     </button>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu-overlay"></div>
+    <nav class="mobile-menu p-6 pt-24">
+        <button class="absolute top-6 right-6" data-menu-close>
+            <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+        <div class="flex flex-col gap-4">
+            <a class="text-lg font-bold text-primary py-2" href="index.html">Trang chủ</a>
+            <a class="text-lg font-medium py-2 hover:text-primary transition-colors" href="list.html">Danh sách</a>
+            <a class="text-lg font-medium py-2 hover:text-primary transition-colors" href="map.html">Bản đồ</a>
+            <a class="text-lg font-medium py-2 hover:text-primary transition-colors" href="gallery.html">Hình ảnh</a>
+            <a class="text-lg font-medium py-2 hover:text-primary transition-colors" href="festival.html">Lễ hội</a>
+            <a class="text-lg font-medium py-2 hover:text-primary transition-colors" href="heritage.html">Di sản</a>
+            <a class="text-lg font-medium py-2 hover:text-primary transition-colors" href="about.html">Giới thiệu</a>
+        </div>
+    </nav>
+
     <main class="pt-20 min-h-screen flex flex-col">
         <!-- Hero Section -->
-        <section class="relative w-full h-[85vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+        <section class="relative w-full h-[90vh] min-h-[700px] flex items-center justify-center overflow-hidden">
+            <!-- Background with Parallax -->
             <div class="absolute inset-0 z-0">
-                <div class="w-full h-full bg-cover bg-center bg-no-repeat"
+                <div class="parallax-bg w-full h-full bg-cover bg-center bg-no-repeat scale-110"
+                    data-parallax-speed="0.3"
                     style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDyGFRc2LdtEhCue45qcRPWUomJaEluFsdfbTCO3S0nqmM5ULHlSttELTc6nyy52LP3oBYenJGW0yT8AuUPF3aYFDR4X4BmWUVv9PeSeRAYyedl4eydHs2GIkhhksZWp-tffRzXg2Nhl0ESw83G18h29uneTtVTWqp5ivQwOjLuJ-v7jjcSse0kDAb8cWtssTMSNWh10MQF7ra0uW4Y2O8i4HuJ12qVOvkR6sJ63ddMm5riGY-FpIlySeY2jDkHEXKmPb-8fctsOGg");'>
                 </div>
-                <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/60"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70"></div>
+                <!-- Animated Gradient Overlay -->
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-accent-red/20 via-transparent to-primary/20 animate-pulse opacity-50">
+                </div>
             </div>
-            <div class="relative z-10 container mx-auto px-4 flex flex-col items-center text-center">
+
+            <!-- Hero Content -->
+            <div class="relative z-10 container mx-auto px-4 flex flex-col items-center text-center hero-content">
                 <span
-                    class="mb-4 px-4 py-1.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-accent-gold text-xs font-bold uppercase tracking-widest">
-                    Triển lãm văn hóa số
+                    class="mb-6 px-6 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-md text-accent-gold text-xs font-bold uppercase tracking-[0.2em] animate-fade-in-down">
+                    ✨ Triển lãm văn hóa số
                 </span>
+
                 <h1
-                    class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight tracking-tight mb-6 drop-shadow-lg max-w-5xl mx-auto">
-                    Hào khí <span class="text-accent-gold italic">54</span> Dân tộc Việt Nam
+                    class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight tracking-tight mb-8 drop-shadow-2xl max-w-5xl mx-auto animate-fade-in-up">
+                    Hào khí <span class="text-accent-gold italic animate-pulse-glow inline-block">54</span> Dân tộc Việt
+                    Nam
                 </h1>
+
                 <p
-                    class="text-white/90 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-md">
+                    class="text-white/90 text-lg md:text-2xl font-light max-w-3xl mx-auto mb-12 leading-relaxed drop-shadow-md animate-fade-in-up delay-200">
                     Hành trình khám phá bản sắc văn hóa đa dạng và tinh thần đoàn kết trường tồn trải dài trên dải đất
                     hình chữ S.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+
+                <div class="flex flex-col sm:flex-row gap-5 w-full justify-center animate-fade-in-up delay-400">
                     <button onclick="window.location.href='list.html'"
-                        class="h-12 px-8 bg-primary hover:bg-[#d95e22] text-white text-base font-bold rounded-full transition-all shadow-[0_0_20px_rgba(238,108,43,0.4)] flex items-center justify-center gap-2 group">
+                        class="btn-primary h-14 px-10 text-lg flex items-center justify-center gap-3 group ripple-effect">
                         <span>Khám phá ngay</span>
                         <span
-                            class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                            class="material-symbols-outlined text-[22px] group-hover:translate-x-2 transition-transform duration-300">arrow_forward</span>
                     </button>
                     <button onclick="window.location.href='map.html'"
-                        class="h-12 px-8 bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/40 text-white text-base font-bold rounded-full transition-all flex items-center justify-center gap-2">
-                        <span class="material-symbols-outlined text-[20px]">map</span>
+                        class="h-14 px-10 bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/40 hover:border-white text-white text-lg font-bold rounded-full transition-all duration-300 flex items-center justify-center gap-3 hover:scale-105">
+                        <span class="material-symbols-outlined text-[22px]">map</span>
                         <span>Xem bản đồ</span>
                     </button>
                 </div>
+
+                <!-- Statistics -->
+                <div class="mt-16 grid grid-cols-3 gap-8 md:gap-16 text-white/80 animate-fade-in-up delay-600">
+                    <div class="text-center">
+                        <div class="text-3xl md:text-5xl font-bold text-white mb-2" data-counter="54">54</div>
+                        <div class="text-sm md:text-base opacity-80">Dân tộc</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-5xl font-bold text-white mb-2" data-counter="34">34</div>
+                        <div class="text-sm md:text-base opacity-80">Tỉnh thành</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl md:text-5xl font-bold text-white mb-2" data-counter="14">14</div>
+                        <div class="text-sm md:text-base opacity-80">Di sản</div>
+                    </div>
+                </div>
             </div>
-            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 animate-bounce">
-                <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/70 animate-bounce">
+                <div class="flex flex-col items-center gap-2">
+                    <span class="text-xs uppercase tracking-widest">Cuộn xuống</span>
+                    <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+                </div>
             </div>
         </section>
 
         <!-- Intro Section -->
-        <section class="bg-white py-20 px-4 sm:px-6 lg:px-8 border-b border-[#e7d7cf]">
-            <div class="max-w-[1024px] mx-auto text-center flex flex-col items-center gap-8">
-                <div class="size-16 rounded-full bg-accent-gold/30 flex items-center justify-center mb-2">
-                    <span class="material-symbols-outlined text-accent-red text-4xl">diversity_3</span>
+        <section
+            class="bg-white dark:bg-background-dark py-24 px-4 sm:px-6 lg:px-8 border-b border-[#e7d7cf] dark:border-accent-red/20 relative overflow-hidden">
+            <!-- Decorative Elements -->
+            <div class="section-decorator section-decorator-1"></div>
+            <div class="section-decorator section-decorator-2"></div>
+
+            <div class="max-w-[1024px] mx-auto text-center flex flex-col items-center gap-8 relative z-10">
+                <div
+                    class="reveal size-20 rounded-full bg-gradient-to-br from-accent-gold/50 to-primary/20 flex items-center justify-center mb-4 animate-float">
+                    <span
+                        class="material-symbols-outlined text-accent-red dark:text-accent-gold text-5xl">diversity_3</span>
                 </div>
-                <h2 class="text-accent-red font-serif text-3xl md:text-5xl font-bold leading-tight">
+
+                <h2
+                    class="reveal text-accent-red dark:text-accent-gold font-serif text-4xl md:text-6xl font-bold leading-tight">
                     Tinh Hoa Đại Đoàn Kết
                 </h2>
-                <div class="w-24 h-1 bg-primary rounded-full"></div>
-                <p class="text-[#5c4a3d] text-lg leading-relaxed max-w-3xl">
+
+                <div class="reveal w-32 h-1.5 bg-gradient-to-r from-primary to-accent-red rounded-full"></div>
+
+                <p class="reveal text-[#5c4a3d] dark:text-white/70 text-lg md:text-xl leading-relaxed max-w-3xl">
                     Việt Nam là ngôi nhà chung của 54 dân tộc anh em, cùng chung sống hòa thuận, đoàn kết, cùng nhau xây
                     dựng và bảo vệ Tổ quốc suốt chiều dài lịch sử. Mỗi dân tộc là một bông hoa rực rỡ, góp phần tạo nên
                     vườn hoa văn hóa Việt Nam phong phú, đa dạng và thống nhất.
@@ -148,45 +233,159 @@
             </div>
         </section>
 
+        <!-- Video Demo Section -->
+        <section class="py-24 bg-gradient-to-br from-[#1b120d] via-[#2a1a12] to-[#1b120d] relative overflow-hidden">
+            <!-- Background decorations -->
+            <div class="absolute inset-0 opacity-10">
+                <div
+                    class="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 right-0 w-96 h-96 bg-accent-gold rounded-full blur-3xl translate-x-1/2 translate-y-1/2">
+                </div>
+            </div>
+
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16 reveal">
+                    <span
+                        class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/80 text-sm font-medium mb-6">
+                        <span class="material-symbols-outlined text-primary">play_circle</span>
+                        Video Demo
+                    </span>
+                    <h2 class="text-white font-serif text-4xl md:text-5xl font-bold mb-6">
+                        Trải Nghiệm <span class="gradient-text">Văn Hóa</span> Việt Nam
+                    </h2>
+                    <p class="text-white/60 text-lg max-w-2xl mx-auto">
+                        Khám phá vẻ đẹp văn hóa đa dạng của 54 dân tộc Việt Nam qua video tổng hợp với âm nhạc truyền
+                        thống
+                    </p>
+                </div>
+
+                <!-- Video Container -->
+                <div class="reveal max-w-4xl mx-auto">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl group">
+                        <!-- Video Wrapper with Aspect Ratio -->
+                        <div class="relative aspect-video bg-black">
+                            <!-- YouTube Embed - Using youtube-nocookie for better privacy and compatibility -->
+                            <iframe id="videoPlayer" class="absolute inset-0 w-full h-full"
+                                src="https://www.youtube-nocookie.com/embed/NSnkb1IAjbE?controls=1&rel=0&modestbranding=1&showinfo=0&autoplay=1&mute=1&enablejsapi=1"
+                                title="Văn hóa 54 dân tộc Việt Nam" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen loading="lazy">
+                            </iframe>
+
+                            <!-- Glow Effect on Hover -->
+                            <div class="absolute inset-0 rounded-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                                style="box-shadow: inset 0 0 60px rgba(238, 108, 43, 0.3);"></div>
+                        </div>
+
+                        <!-- Decorative Frame -->
+                        <div
+                            class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-primary via-accent-gold to-accent-red opacity-20 blur-sm -z-10">
+                        </div>
+                    </div>
+
+                    <!-- Video Info -->
+                    <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/60">
+                        <div class="flex items-center gap-4">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">music_note</span>
+                                <span class="text-sm">Nhạc truyền thống Việt Nam</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">schedule</span>
+                                <span class="text-sm">Thời lượng: ~5 phút</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button onclick="shareVideo()"
+                                class="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-full transition-colors text-sm">
+                                <span class="material-symbols-outlined text-[18px]">share</span>
+                                Chia sẻ
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Features -->
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 reveal">
+                    <div class="text-center p-6">
+                        <div
+                            class="size-14 rounded-2xl bg-primary/20 flex items-center justify-center text-primary mx-auto mb-4">
+                            <span class="material-symbols-outlined text-3xl">headphones</span>
+                        </div>
+                        <h4 class="text-white font-bold text-lg mb-2">Âm Nhạc Truyền Thống</h4>
+                        <p class="text-white/50 text-sm">Thưởng thức những giai điệu dân tộc đặc sắc từ khắp các vùng
+                            miền</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div
+                            class="size-14 rounded-2xl bg-primary/20 flex items-center justify-center text-primary mx-auto mb-4">
+                            <span class="material-symbols-outlined text-3xl">photo_camera</span>
+                        </div>
+                        <h4 class="text-white font-bold text-lg mb-2">Hình Ảnh Chất Lượng Cao</h4>
+                        <p class="text-white/50 text-sm">Khám phá vẻ đẹp văn hóa qua những thước phim sống động</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div
+                            class="size-14 rounded-2xl bg-primary/20 flex items-center justify-center text-primary mx-auto mb-4">
+                            <span class="material-symbols-outlined text-3xl">groups</span>
+                        </div>
+                        <h4 class="text-white font-bold text-lg mb-2">54 Dân Tộc Anh Em</h4>
+                        <p class="text-white/50 text-sm">Tổng hợp nét đẹp văn hóa của tất cả các dân tộc Việt Nam</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Feature Grid -->
-        <section class="py-20 bg-[#fcf9f8]">
+        <section class="py-24 bg-[#fcf9f8] dark:bg-background-dark relative overflow-hidden">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div
-                        class="group bg-white p-8 rounded-2xl border border-[#e7d7cf] hover:shadow-xl hover:border-primary/30 transition-all duration-300">
+                    <!-- Card 1 -->
+                    <div class="reveal premium-card group" style="animation-delay: 100ms;">
                         <div
-                            class="size-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">palette</span>
+                            class="size-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                            <span class="material-symbols-outlined text-4xl">palette</span>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1b120d] mb-3 group-hover:text-primary transition-colors">Bản
-                            sắc đa dạng</h3>
-                        <p class="text-text-muted leading-relaxed">
+                        <h3
+                            class="text-2xl font-bold text-[#1b120d] dark:text-white mb-4 group-hover:text-primary transition-colors">
+                            Bản sắc đa dạng
+                        </h3>
+                        <p class="text-text-muted dark:text-white/60 leading-relaxed text-lg">
                             Mỗi dân tộc mang một nét văn hóa riêng biệt từ trang phục, tiếng nói đến phong tục tập quán,
                             tạo nên bức tranh đa màu sắc.
                         </p>
                     </div>
-                    <div
-                        class="group bg-white p-8 rounded-2xl border border-[#e7d7cf] hover:shadow-xl hover:border-primary/30 transition-all duration-300">
+
+                    <!-- Card 2 -->
+                    <div class="reveal premium-card group" style="animation-delay: 200ms;">
                         <div
-                            class="size-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">temple_buddhist</span>
+                            class="size-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                            <span class="material-symbols-outlined text-4xl">temple_buddhist</span>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1b120d] mb-3 group-hover:text-primary transition-colors">Di
-                            sản phong phú</h3>
-                        <p class="text-text-muted leading-relaxed">
+                        <h3
+                            class="text-2xl font-bold text-[#1b120d] dark:text-white mb-4 group-hover:text-primary transition-colors">
+                            Di sản phong phú
+                        </h3>
+                        <p class="text-text-muted dark:text-white/60 leading-relaxed text-lg">
                             Kho tàng di sản văn hóa vật thể và phi vật thể vô giá như Cồng chiêng Tây Nguyên, Nhã nhạc
                             cung đình Huế được thế giới công nhận.
                         </p>
                     </div>
-                    <div
-                        class="group bg-white p-8 rounded-2xl border border-[#e7d7cf] hover:shadow-xl hover:border-primary/30 transition-all duration-300">
+
+                    <!-- Card 3 -->
+                    <div class="reveal premium-card group" style="animation-delay: 300ms;">
                         <div
-                            class="size-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-                            <span class="material-symbols-outlined text-3xl">handshake</span>
+                            class="size-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                            <span class="material-symbols-outlined text-4xl">handshake</span>
                         </div>
-                        <h3 class="text-xl font-bold text-[#1b120d] mb-3 group-hover:text-primary transition-colors">
-                            Đoàn kết bền vững</h3>
-                        <p class="text-text-muted leading-relaxed">
+                        <h3
+                            class="text-2xl font-bold text-[#1b120d] dark:text-white mb-4 group-hover:text-primary transition-colors">
+                            Đoàn kết bền vững
+                        </h3>
+                        <p class="text-text-muted dark:text-white/60 leading-relaxed text-lg">
                             Sức mạnh đại đoàn kết toàn dân tộc là cội nguồn sức mạnh, là động lực chủ yếu và là nhân tố
                             có ý nghĩa quyết định.
                         </p>
@@ -196,139 +395,258 @@
         </section>
 
         <!-- Featured Carousel -->
-        <section class="py-16 md:py-24 overflow-hidden bg-white">
-            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 flex items-end justify-between">
-                <div>
-                    <h2 class="text-3xl font-bold text-[#1b120d] mb-2 font-serif">Góc Nhìn Di Sản</h2>
-                    <p class="text-text-muted">Những hình ảnh tiêu biểu về đời sống và văn hóa</p>
+        <section class="py-24 overflow-hidden bg-white dark:bg-[#1a1310]">
+            <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+                <div class="reveal flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+                    <div>
+                        <span class="text-primary text-sm font-bold uppercase tracking-widest mb-3 block">Khám
+                            phá</span>
+                        <h2 class="text-4xl md:text-5xl font-bold text-[#1b120d] dark:text-white mb-3 font-serif">Góc
+                            Nhìn Di Sản</h2>
+                        <p class="text-text-muted dark:text-white/60 text-lg">Những hình ảnh tiêu biểu về đời sống và
+                            văn hóa</p>
+                    </div>
+                    <a href="gallery.html" class="btn-outline flex items-center gap-2 group">
+                        <span>Xem tất cả</span>
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
                 </div>
             </div>
+
             <div class="flex overflow-x-auto no-scrollbar gap-6 px-4 sm:px-6 lg:px-8 pb-8 snap-x snap-mandatory">
-                <div class="min-w-[300px] md:min-w-[400px] snap-center">
-                    <div class="relative group rounded-xl overflow-hidden aspect-[4/3] mb-4">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                <!-- Card 1 -->
+                <div class="min-w-[320px] md:min-w-[420px] snap-center reveal" style="animation-delay: 100ms;">
+                    <div class="image-zoom relative group aspect-[4/3] mb-5">
+                        <div class="w-full h-full bg-cover bg-center"
                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDZmTjyHxs7IBMR_YXyQdcf2tE1eV-E76CJL-MdqD_gAEAnia_xZWN98doFBiKpjcMlfzXbot2H9dzqOS0h68-nPNG4Ocr82DmL3Bb4TLqTjjSf-1YWwdTPDfQAOtFORgrmx6yace3Nl92t8GsEU3sdG82xJTAqtWK248tPAIE8NolsBuTkZW2oWsZqBkZIJYkcZrzk6egfv26p6w4tJ8B8aA_G-jDsj27X6bxeSQ8BRMfd44RN4jxgPvEG3Kf0_lflPFyuUupZMms");'>
                         </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            <span class="text-sm font-medium">Khám phá ngay</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#1b120d]">Trang phục truyền thống</h3>
-                    <p class="text-text-muted text-sm mt-1">Vẻ đẹp rực rỡ sắc màu Tây Bắc</p>
+                    <h3
+                        class="text-xl font-bold text-[#1b120d] dark:text-white hover:text-primary transition-colors cursor-pointer">
+                        Trang phục truyền thống</h3>
+                    <p class="text-text-muted dark:text-white/60 text-sm mt-2">Vẻ đẹp rực rỡ sắc màu Tây Bắc</p>
                 </div>
-                <div class="min-w-[300px] md:min-w-[400px] snap-center">
-                    <div class="relative group rounded-xl overflow-hidden aspect-[4/3] mb-4">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+
+                <!-- Card 2 -->
+                <div class="min-w-[320px] md:min-w-[420px] snap-center reveal" style="animation-delay: 200ms;">
+                    <div class="image-zoom relative group aspect-[4/3] mb-5">
+                        <div class="w-full h-full bg-cover bg-center"
                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA86HkKP-1peDc_dhA2-bjJS9agn7BPXfs-5AeaIIIgNXHOhnBq9BhgFPyksfxdXqJ6vvgMUB4EIcOPVs2x3YQ9EXoLAjxqS4O0JoPgS2DpHkpzWqCRcd5-4lvQ7oTxZyK6Dj9qS0IeqQzSE8wYftbpLcY5R2U6seCvyp9MkPRgD-weEJX_RZrllZ2sTqu5TVowfIsqhyCfdOzSnK7J-TuCQvaKpwW2G1Af2eeGEAIhvYy2Cgu-EtX2xolnDvCfZo9fa4W8e14qRhM");'>
                         </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            <span class="text-sm font-medium">Khám phá ngay</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#1b120d]">Không gian văn hóa Cồng chiêng</h3>
-                    <p class="text-text-muted text-sm mt-1">Di sản văn hóa phi vật thể</p>
+                    <h3
+                        class="text-xl font-bold text-[#1b120d] dark:text-white hover:text-primary transition-colors cursor-pointer">
+                        Không gian văn hóa Cồng chiêng</h3>
+                    <p class="text-text-muted dark:text-white/60 text-sm mt-2">Di sản văn hóa phi vật thể</p>
                 </div>
-                <div class="min-w-[300px] md:min-w-[400px] snap-center">
-                    <div class="relative group rounded-xl overflow-hidden aspect-[4/3] mb-4">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+
+                <!-- Card 3 -->
+                <div class="min-w-[320px] md:min-w-[420px] snap-center reveal" style="animation-delay: 300ms;">
+                    <div class="image-zoom relative group aspect-[4/3] mb-5">
+                        <div class="w-full h-full bg-cover bg-center"
                             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAiY0VwDcpE9LEpa9_j0pgBSeX6NtoSLRWSeUvqBAGhPlcTbEIyZqzPr_rTzHgjJmxCGVl-PE2DpJb05CFq1yQIB4mfMeuzspUOb6v0Wc7JTlPAwBx-W4QUSuXbJ7pSxRtS9vy4R8abVQQ7vJyNlUcJqN-m2UU5dquI5I4kRAvlK7nAziDwXqvzfl3amFuOVBuABNLM81Itcdt5IqUh9RBnzQnNxFUeJK6Tptbscv3Z4NkP_2dWmCnG6g8LzASaSnL91s3Axk-i6nQ");'>
                         </div>
-                    </div>
-                    <h3 class="text-xl font-bold text-[#1b120d]">Ruộng bậc thang Mù Cang Chải</h3>
-                    <p class="text-text-muted text-sm mt-1">Kiệt tác từ bàn tay lao động</p>
-                </div>
-                <div class="min-w-[300px] md:min-w-[400px] snap-center">
-                    <div class="relative group rounded-xl overflow-hidden aspect-[4/3] mb-4">
-                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVSfhtuDWa9v3lc3eehFGY2pgspQzbKZwM3xcf2ANy4_FMb-E_SV0BjJKI63CUzrw4u-exjUg29uTPrhK4Z0s3geoSmcoEMGclpMACLFrRTIca3lEIAfRnTEiNbRvvmKaf5hX1qBMjgNgMWV5vszPI-6M0U8CxjrldvQBaRkZ84tROB5oJtINKqDDjGtrPfGvBdWG-B_RkvWHDM-OkNWwTb7cdh6qYoXA6vr-WzUtruxLuGI7WyqsKGmUbFyRtufKd1Py_W6EWZXk");'>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            <span class="text-sm font-medium">Khám phá ngay</span>
                         </div>
                     </div>
-                    <h3 class="text-xl font-bold text-[#1b120d]">Kiến trúc nhà sàn</h3>
-                    <p class="text-text-muted text-sm mt-1">Nét đẹp cư trú truyền thống</p>
+                    <h3
+                        class="text-xl font-bold text-[#1b120d] dark:text-white hover:text-primary transition-colors cursor-pointer">
+                        Ruộng bậc thang Mù Cang Chải</h3>
+                    <p class="text-text-muted dark:text-white/60 text-sm mt-2">Kiệt tác từ bàn tay lao động</p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="min-w-[320px] md:min-w-[420px] snap-center reveal" style="animation-delay: 400ms;">
+                    <div class="image-zoom relative group aspect-[4/3] mb-5">
+                        <div class="w-full h-full bg-cover bg-center"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAVSfhtuDWa9v3lc3eehFGY2pgspQzbKZwM3xcf2ANy4_FMb-E_SV0BjJKI63CUzrw4u-exjUg29uTPrhK4Z0s3geoSmcoEMGclpMACLFrRTIca3lEIAfRnTEiNbRvvmKaf5hX1qBMjgNgMWV5vszPI-6M0U8CxjrldvQBaRkZ84tROB5oJtINKqDDjGtrPfGvBdWG-B_RkvWHDM-OkNWwTb7cdh6qYoXA6vr-WzUtruxLuGI7WyqsKGmUbFyRtufKd1Py_W6EWZXk");'>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                        <div
+                            class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            <span class="text-sm font-medium">Khám phá ngay</span>
+                        </div>
+                    </div>
+                    <h3
+                        class="text-xl font-bold text-[#1b120d] dark:text-white hover:text-primary transition-colors cursor-pointer">
+                        Kiến trúc nhà sàn</h3>
+                    <p class="text-text-muted dark:text-white/60 text-sm mt-2">Nét đẹp cư trú truyền thống</p>
                 </div>
             </div>
         </section>
 
         <!-- CTA Section -->
-        <section class="py-20 px-4 bg-accent-gold/10 relative overflow-hidden">
+        <section class="py-24 px-4 relative overflow-hidden">
+            <!-- Animated Background -->
+            <div class="absolute inset-0 animated-gradient opacity-10"></div>
             <div class="absolute inset-0 opacity-5 pointer-events-none"
-                style="background-image: radial-gradient(#8B0000 1px, transparent 1px); background-size: 20px 20px;">
+                style="background-image: radial-gradient(#8B0000 1px, transparent 1px); background-size: 24px 24px;">
             </div>
-            <div class="max-w-4xl mx-auto text-center relative z-10">
-                <h2 class="text-3xl md:text-5xl font-serif font-bold text-accent-red mb-6">Sẵn sàng khám phá bản đồ di
-                    sản?</h2>
-                <p class="text-lg text-text-muted mb-10">
-                    Trải nghiệm tương tác sống động, tìm hiểu vị trí địa lý và đặc điểm cư trú của 54 dân tộc trên bản
-                    đồ Việt Nam.
-                </p>
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <button onclick="window.location.href='map.html'"
-                        class="h-12 px-8 bg-accent-red hover:bg-[#720000] text-white text-base font-bold rounded-lg transition-all shadow-lg flex items-center justify-center gap-2">
-                        <span class="material-symbols-outlined">map</span>
-                        <span>Mở Bản Đồ</span>
-                    </button>
-                    <button onclick="window.location.href='list.html'"
-                        class="h-12 px-8 bg-white border border-[#e7d7cf] hover:border-primary hover:text-primary text-[#1b120d] text-base font-bold rounded-lg transition-all flex items-center justify-center gap-2">
-                        <span>Tìm hiểu thêm</span>
-                    </button>
+
+            <div class="max-w-5xl mx-auto text-center relative z-10">
+                <div class="reveal glass-card p-12 md:p-16 rounded-3xl">
+                    <span class="text-primary text-sm font-bold uppercase tracking-widest mb-4 block">Trải nghiệm tương
+                        tác</span>
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold text-accent-red dark:text-accent-gold mb-8">
+                        Sẵn sàng khám phá bản đồ di sản?
+                    </h2>
+                    <p class="text-lg md:text-xl text-text-muted dark:text-white/70 mb-12 max-w-3xl mx-auto">
+                        Trải nghiệm tương tác sống động, tìm hiểu vị trí địa lý và đặc điểm cư trú của 54 dân tộc trên
+                        bản
+                        đồ Việt Nam.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center gap-5">
+                        <button onclick="window.location.href='map.html'"
+                            class="h-14 px-10 bg-accent-red hover:bg-[#720000] text-white text-lg font-bold rounded-full transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 flex items-center justify-center gap-3 ripple-effect">
+                            <span class="material-symbols-outlined">map</span>
+                            <span>Mở Bản Đồ</span>
+                        </button>
+                        <button onclick="window.location.href='list.html'" class="btn-outline h-14 px-10 text-lg">
+                            <span>Tìm hiểu thêm</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="bg-[#1b120d] text-white/80 py-12 md:py-16 mt-auto">
+        <footer class="bg-[#1b120d] text-white/80 py-16 md:py-20 mt-auto">
             <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-white/10 pb-12 mb-12">
+                    <!-- Brand -->
                     <div class="col-span-1 md:col-span-1">
                         <div class="flex items-center gap-3 mb-6">
-                            <div class="size-10 text-white flex items-center justify-center rounded-full bg-accent-red">
-                                <span class="material-symbols-outlined text-[24px]">museum</span>
+                            <div class="size-12 text-white flex items-center justify-center rounded-full bg-accent-red">
+                                <span class="material-symbols-outlined text-[28px]">museum</span>
                             </div>
                             <span class="text-white font-bold text-xl font-serif">Triển Lãm 54 Dân Tộc</span>
                         </div>
                         <p class="text-sm leading-relaxed text-white/60">
                             Dự án bảo tàng số nhằm lưu giữ và phát huy giá trị văn hóa của 54 dân tộc Việt Nam.
                         </p>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold text-lg mb-4">Khám phá</h4>
-                        <ul class="space-y-3 text-sm">
-                            <li><a class="hover:text-primary transition-colors" href="#list">Danh sách dân tộc</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#map">Bản đồ phân bố</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#heritage">Di sản văn hóa</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="festival.html">Lễ hội truyền thống</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold text-lg mb-4">Thông tin</h4>
-                        <ul class="space-y-3 text-sm">
-                            <li><a class="hover:text-primary transition-colors" href="#about">Về chúng tôi</a></li>
-                            <li><a class="hover:text-primary transition-colors" >Liên hệ : 0868172958</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-bold text-lg mb-4">Theo dõi</h4>
-                        <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
-                        <div class="flex gap-3">
-                            <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                        <!-- Social Links -->
+                        <div class="flex gap-3 mt-6">
+                            <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center hover:scale-110 transform duration-300"
                                 href="#">
                                 <span class="material-symbols-outlined text-xl">thumb_up</span>
                             </a>
-                            <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center hover:scale-110 transform duration-300"
                                 href="#">
                                 <span class="material-symbols-outlined text-xl">play_circle</span>
                             </a>
-                            <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
+                            <a class="size-10 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center hover:scale-110 transform duration-300"
                                 href="#">
                                 <span class="material-symbols-outlined text-xl">photo_camera</span>
                             </a>
                         </div>
                     </div>
+
+                    <!-- Explore -->
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-6">Khám phá</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a class="hover:text-primary transition-colors text-underline-animated"
+                                    href="list.html">Danh sách dân tộc</a></li>
+                            <li><a class="hover:text-primary transition-colors text-underline-animated"
+                                    href="map.html">Bản đồ phân bố</a></li>
+                            <li><a class="hover:text-primary transition-colors text-underline-animated"
+                                    href="heritage.html">Di sản văn hóa</a></li>
+                            <li><a class="hover:text-primary transition-colors text-underline-animated"
+                                    href="festival.html">Lễ hội truyền thống</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Info -->
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-6">Thông tin</h4>
+                        <ul class="space-y-4 text-sm">
+                            <li><a class="hover:text-primary transition-colors text-underline-animated"
+                                    href="about.html">Về chúng tôi</a></li>
+                            <li><a class="hover:text-primary transition-colors">Liên hệ: 0868172958</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Newsletter -->
+                    <div>
+                        <h4 class="text-white font-bold text-lg mb-6">Theo dõi</h4>
+                        <p class="text-sm text-white/60 mb-4">Cập nhật tin tức và sự kiện văn hóa mới nhất</p>
+                        <div class="flex gap-2">
+                            <input type="email" placeholder="Email của bạn"
+                                class="flex-1 h-12 px-4 rounded-full bg-white/10 border border-white/20 focus:border-primary focus:outline-none text-white placeholder:text-white/40 text-sm" />
+                            <button
+                                class="h-12 w-12 rounded-full bg-primary hover:bg-[#d95e22] transition-colors flex items-center justify-center">
+                                <span class="material-symbols-outlined">send</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-                    <p>© 2026 Triển Lãm 54 Dân Tộc Việt Nam.</p>
+                    <p>© 2026 Triển Lãm 54 Dân Tộc Việt Nam. Bảo lưu mọi quyền.</p>
                 </div>
             </div>
         </footer>
     </main>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop"
+        class="fixed bottom-6 right-6 size-12 bg-primary hover:bg-[#d95e22] text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 flex items-center justify-center z-50 hover:scale-110"
+        onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </button>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
     <script>
-        function toggleDarkMode() {
-            document.documentElement.classList.toggle('dark');
+        // Back to Top Button
+        window.addEventListener('scroll', () => {
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        // Share Video function
+        function shareVideo() {
+            const videoUrl = 'https://www.youtube.com/watch?v=NSnkb1IAjbE';
+            if (navigator.share) {
+                navigator.share({
+                    title: '54 Dân Tộc Việt Nam - Video Demo',
+                    text: 'Khám phá vẻ đẹp văn hóa đa dạng của 54 dân tộc Việt Nam',
+                    url: videoUrl
+                });
+            } else {
+                // Fallback: copy to clipboard
+                navigator.clipboard.writeText(videoUrl).then(() => {
+                    alert('Đã sao chép link video vào clipboard!');
+                });
+            }
         }
     </script>
 </body>
